@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavbarLanding from "./NavbarLanding"
+import Navbar from "./Navbar"
+import Landing from "./Landing"
 
 
 
@@ -8,10 +9,9 @@ function App() {
  
   return (
     <BrowserRouter>
-      <NavbarLanding />
+      <Navbar />
       <Routes>
-
-
+        <Route path="/" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   )

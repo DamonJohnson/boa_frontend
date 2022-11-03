@@ -8,6 +8,10 @@ module.exports = {
       navcolor: "#1e293b",
       white: "#f8fafc",
     },
+    backgroundImage: {
+      "white-texture":
+        "url(https://res.cloudinary.com/damonjohnson/image/upload/v1667458644/Boa/white-radial-gradient-a5802da1_o2iegs.jpg)",
+    },
     plugins: [],
     variables: {},
   },

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NavbarLanding = () => {
+const Navbar = () => {
   return (
     
     <nav class="border-b-4 border-primary" style={
@@ -38,4 +38,4 @@ const NavbarLanding = () => {
   )
 }
 
-export default NavbarLanding
+export default Navbar
