@@ -6,7 +6,7 @@ module.exports = {
       primary: "#44AE5A",
       secondary: "#ecc94b",
       navcolor: "#1e293b",
-      nav1: "#"
+      white: "#f8fafc",
     },
     plugins: [],
     variables: {},

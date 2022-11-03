@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Landing = () => {
+const LandingMeshBackground = () => {
   return (
     <>
       <div
@@ -16,4 +16,4 @@ const Landing = () => {
   )
 }
 
-export default Landing
+export default LandingMeshBackground
