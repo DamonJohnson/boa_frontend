@@ -3,7 +3,7 @@ import Hero from "./Hero"
 
 const Landing = () => {
     return (
-    <div Class="bg-white-texture bg-no-repeat bg-cover bg-center bg-fixe pb-64">
+    <div Class="bg-plastic bg-no-repeat bg-cover bg-center bg-fixed h-screen -mt-20">
         < Hero />
      </div>
   )

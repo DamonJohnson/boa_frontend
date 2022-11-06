@@ -7,10 +7,11 @@ module.exports = {
       secondary: "#ecc94b",
       navcolor: "#1e293b",
       white: "#f8fafc",
+      black: "#000000"
     },
     backgroundImage: {
-      "white-texture":
-        "url(https://res.cloudinary.com/damonjohnson/image/upload/v1667458644/Boa/white-radial-gradient-a5802da1_o2iegs.jpg)",
+      "plastic":
+        "url(https://res.cloudinary.com/damonjohnson/image/upload/v1667698641/Boa/plastic_2.jpg)",
     },
     plugins: [],
     variables: {},

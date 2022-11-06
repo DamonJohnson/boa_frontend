@@ -3,9 +3,8 @@ import React from 'react'
 const Navbar = () => {
   return (
     
-    <nav class="border-b-4 border-primary" style={
-{background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 32%, rgba(32,95,143,1) 89%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
-  <div class="container flex flex-wrap justify-between items-center mx-auto z-10">
+    <nav class="z-10">
+  <div class="container flex flex-wrap justify-between items-center mx-auto">
     <a href="/" class="flex items-center">
         <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1666511301/Boa/Green-transparent_llezws.png" class="mr-0 h-20 sm:h-20"alt="Boa Wraps Logo" />
     </a>
