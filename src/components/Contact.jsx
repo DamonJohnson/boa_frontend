@@ -5,7 +5,7 @@ const Contact = () => {
       <>
     <section class="bg-white">
   <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-black">Contact Us</h2>
+      <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-blac">Contact Us</h2>
       <p class="mb-8 lg:mb-16 font-light text-center text-black dark:text-black sm:text-xl">If you would like to know more about our products or services, or offer some feedback, please do not hesitate to get in touch.</p>
       <form action="#" class="space-y-8">
           <div>

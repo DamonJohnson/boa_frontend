@@ -7,13 +7,12 @@ module.exports = {
       secondary: "#ecc94b",
       navcolor: "#1e293b",
       white: "#f8fafc",
-      black: "#000000"
-    },
-    backgroundImage: {
-      "plastic":
-        "url(https://res.cloudinary.com/damonjohnson/image/upload/v1667698641/Boa/plastic_2.jpg)",
+      black: "#000000",
+      grey: "#A4A3A2",
     },
     plugins: [],
-    variables: {},
+    variables: {
+      "warehouse- video":
+        "url(https://res.cloudinary.com/damonjohnson/video/upload/v1667991352/Boa/production_ID_4294438_m1ir2d.mp4)",},
   },
 }
