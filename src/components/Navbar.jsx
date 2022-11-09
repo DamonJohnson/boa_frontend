@@ -19,13 +19,13 @@ const NavbarLanding = () => {
           <a href="/" class="block py-2 pr-4 pl-3 text-primary bg-blue-700 rounded md:bg-slate-800 md:text-primary md:p-0" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/contact" class="block py-2 pr-4 pl-3 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">Contact</a>
-        </li>
-        <li>
           <a href="/about" class="block py-2 pr-4 pl-3 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">About</a>
         </li>
         <li>
           <a href="/store" class="block py-2 pr-4 pl-3 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">Store</a>
+            </li>
+            <li>
+          <a href="/contact" class="block py-2 pr-4 pl-3 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">Contact</a>
         </li>
         <li>
           <a href="/my-account" class="block py-2 pr-4 pl-3 text-primary rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">My Account</a>
