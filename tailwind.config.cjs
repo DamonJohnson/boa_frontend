@@ -10,10 +10,10 @@ module.exports = {
       black: "#000000",
       grey: "#A4A3A2",
     },
-    plugins: [],
+    plugins: [require("daisyui")],
     variables: {
-      "warehouse- video":
-        "url(https://res.cloudinary.com/damonjohnson/video/upload/v1667991352/Boa/production_ID_4294438_m1ir2d.mp4)",
+      "hero-video":
+        "url(https://res.cloudinary.com/damonjohnson/video/upload/v1669295293/Boa/Hero-short.mp4)",
     },
   },
 }
