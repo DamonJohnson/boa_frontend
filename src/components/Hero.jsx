@@ -18,15 +18,13 @@ const Hero = () => {
                     <div class="relative xl:container m-auto px-6 md:px-12 lg:px-6">
                         <h1 class="sm:mx-auto sm:w-10/12 md:w-2/3 text-white text-4xl text-center sm:text-5xl md:text-6xl lg:w-auto  xl:text-7xl">Reusable Pallet Wraps</h1>
                         <div class="lg:flex">
-                            <div class="relative mt-8 md:mt-16 space-y-8 sm:w-10/12 md:w-2/3 sm:mx-auto text-center lg:w-auto">
-                                <p class="sm:text-lg text-white font-boldlg:w-12/12">
-                                    Save Time. Save Money. Reduce Waste.
-                                    <br></br>
-                                    A sustainable alternative to single use shrink wrap film.
+                            <div class="relative mt-8 md:mt-8 space-y-8 sm:w-10/12 md:w-2/3 sm:mx-auto text-center lg:w-auto">
+                                <p className="mb-4 text-3xl tracking-tight text-center text-white">
+                                    A sustainable alternative to single use shrink wrap film
                                 </p>
                                 <div class="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-centre">
-                                    <a aria-label="add to slack" href="/store" class="p-4 border-2 bg-secondary hover:bg-primary border-white  rounded-full duration-300  hover:shadow-secondary ">
-                                        <div class="flex justify-center space-x-4">
+                                    <a aria-label="add to slack" href="/store" class="p-4 border-2 bg-secondary rounded-md hover:bg-primary border-white duration-100  hover:shadow-secondary ">
+                                        <div class="flex justify-center w-40">
                                             <span class="hidden font-medium md:block text-white">View Products</span>
                                         </div>
                                     </a>

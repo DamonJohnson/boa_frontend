@@ -19,10 +19,7 @@ const NavbarLanding = () => {
           <a href="/"  className="block py-2 pr-4 pl-3 text-primary rounded md:p-0 hover:text-white" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/about"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">About</a>
-        </li>
-        <li>
-          <a href="/store"  className="block py-2 pr-4 pl-3 text-primary rounded  hover:text-white md:p-0">Store</a>
+          <a href="/products"  className="block py-2 pr-4 pl-3 text-primary rounded  hover:text-white md:p-0">Products</a>
             </li>
             <li>
           <a href="/contact"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white  md:p-0">Contact</a>
