@@ -4,14 +4,16 @@ module.exports = {
   theme: {
     colors: {
       primary: "#44AE5A",
-      secondary: "#0F456A",
-      navcolor: "#1e293b",
+      secondary: "#0A5071",
+      navcolor: "#BF3100",
       white: "#f8fafc",
       black: "#000000",
-      grey: "#A4A3A2",
-      "pale-grey": "#F2F2F2",
+      grey: "#DEE5E5",
+      "pale-grey": "#DEE5E5",
+      rust: "#BF3100",
+      orange: "#FFA630",
+      "blue-700": "#1d4ed8",
     },
-    plugins: [require("daisyui")],
     variables: {
       "hero-video":
         "url(https://res.cloudinary.com/damonjohnson/video/upload/v1669295293/Boa/Hero-short.mp4)",

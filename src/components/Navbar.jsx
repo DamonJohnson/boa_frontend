@@ -1,13 +1,17 @@
 import React from 'react'
 
+
+
 const NavbarLanding = () => {
+
+
   return (
     
     <nav  className="border-b-4 border-primary" style={
 {background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 32%, rgba(9,86,145,1) 67%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
   <div  className="container flex flex-wrap justify-between items-center mx-auto z-10">
     <a href="/"  className="flex items-center">
-        <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1666511301/Boa/Green-transparent_llezws.png"  className="mr-0 h-20 sm:h-20"alt="Boa Wraps Logo" />
+        <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1670396064/Boa/Boa_Wraps_scxfem.svg"  className="mr-0 xsm:h-10 md:h-16 l:h-20"alt="Boa Wraps Logo" />
     </a>
     <button data-collapse-toggle="navbar-default" type="button"  className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray focus:outline-none focus:ring-2 focus:gray :text-gray-400" aria-controls="navbar-default" aria-expanded="false">
       <span  className="sr-only">Open main menu</span>
@@ -26,6 +30,12 @@ const NavbarLanding = () => {
         </li>
         <li>
           <a href="/my-account"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">My Account</a>
+            </li>
+              <li>
+          <a href="/login"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">Login</a>
+            </li>
+                <li>
+          <a href="/registration"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">Register</a>
         </li>
       </ul>
     </div>
