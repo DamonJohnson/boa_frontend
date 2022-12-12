@@ -1,13 +1,13 @@
 import React from 'react'
 import Hero from "./Hero"
-import About from "./About"
+import Benefits from "./Benefits"
 import Products from "./Products"
 
 const Landing = () => {
     return (
     <div>
-            < Hero />
-        < About />
+        < Hero />
+        < Benefits />
         <Products />
      </div>
   )
