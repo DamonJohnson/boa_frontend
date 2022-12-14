@@ -7,8 +7,8 @@ const NavbarLanding = () => {
 
   return (
     
-    <nav  className="border-b-4 border-primary" style={
-{background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 32%, rgba(9,86,145,1) 67%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
+    <nav  className="border-b-2 border-primary" style={
+{background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 55%, rgba(9,86,145,1) 85%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
   <div  className="container flex flex-wrap justify-between items-center mx-auto z-10">
     <a href="/"  className="flex items-center">
         <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1670396064/Boa/Boa_Wraps_scxfem.svg"  className="mr-0 xsm:h-10 md:h-16 l:h-20"alt="Boa Wraps Logo" />
@@ -20,17 +20,17 @@ const NavbarLanding = () => {
     <div  className="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul  className="flex flex-col p-4 mt-4 bg-slate-800 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
         <li>
-          <a href="/"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded md:p-0 hover:text-white" aria-current="page">Home</a>
+          <a href="/"  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/products"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded  hover:text-white md:p-0">Products</a>
+          <a href="/products"  className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0">Products</a>
             </li>
             <li>
-          <a href="/contact"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded hover:text-white  md:p-0">Contact</a>
+          <a href="/contact"  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0">Contact</a>
             </li>
             <li>
                   <a href="/quote" >
-                <button className="bg-primary text-white p-4  border- duration-100 rounded-md hover:text-blue-700">
+                <button className="bg-primary text-white py-3 px-4  border- duration-100 rounded-l-xl rounded-tr-xl hover:text-blue-700">
                 Get a quote today!
               </button>
               </a>            
