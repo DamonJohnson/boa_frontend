@@ -20,23 +20,22 @@ const NavbarLanding = () => {
     <div  className="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul  className="flex flex-col p-4 mt-4 bg-slate-800 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
         <li>
-          <a href="/"  className="block py-2 pr-4 pl-3 text-primary rounded md:p-0 hover:text-white" aria-current="page">Home</a>
+          <a href="/"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded md:p-0 hover:text-white" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/products"  className="block py-2 pr-4 pl-3 text-primary rounded  hover:text-white md:p-0">Products</a>
+          <a href="/products"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded  hover:text-white md:p-0">Products</a>
             </li>
             <li>
-          <a href="/contact"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white  md:p-0">Contact</a>
-        </li>
-        <li>
-          <a href="/my-account"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">My Account</a>
+          <a href="/contact"  className="block mt-4 py-2 pr-4 pl-3 text-primary rounded hover:text-white  md:p-0">Contact</a>
             </li>
-              <li>
-          <a href="/login"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">Login</a>
+            <li>
+                  <a href="/quote" >
+                <button className="bg-primary text-white p-4  border- duration-100 rounded-md hover:text-blue-700">
+                Get a quote today!
+              </button>
+              </a>            
             </li>
-                <li>
-          <a href="/registration"  className="block py-2 pr-4 pl-3 text-primary rounded hover:text-white md:p-0">Register</a>
-        </li>
+
       </ul>
     </div>
   </div>

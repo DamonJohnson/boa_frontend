@@ -1,41 +1,44 @@
-import React from 'react'
+import React from "react"
 
 const Hero = () => {
-    return (
-        <>
-            <header className="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    className="absolute z-10 w-auto min-w-full min-h-full max-w-none brightness-75">
-                    <source
-                        src="https://res.cloudinary.com/damonjohnson/video/upload/v1669295293/Boa/Hero-short.mp4"
-                        type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
-                <div className="relative pt-40 pb-20 lg:pt-44 dark:bg-gray-900 z-30">
-                    <div className="relative xl:container m-auto px-6 md:px-12 lg:px-6">
-                        <h1 className="sm:mx-auto sm:w-10/12 md:w-2/3 text-white text-center sm:text-4xl md:text-5xl lg:w-auto  xl:text-6xl">Reusable Pallet Wraps</h1>
-                        <div className="lg:flex">
-                            <div className="relative mt-8 md:mt-8 space-y-8 sm:w-10/12 md:w-2/3 sm:mx-auto text-center lg:w-auto">
-                                <p className="text-xl text-center text-white">
-                                    A sustainable alternative to single use shrink wrap film
-                                </p>
-                                <div className="grid grid-cols-3 space-x-4 md:space-x-6 md:flex md:justify-center lg:justify-centre">
-                                    <a aria-label="add to slack" href="/store" className="p-4 border-2 bg-secondary rounded-md hover:bg-primary border-white duration-100  hover:shadow-secondary ">
-                                        <div className="flex justify-center w-40">
-                                            <span className="hidden text-l md:block text-white">View Products</span>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </header>
-        </>
-    )
+  return (
+    <>
+      <header className="relative sm:flex sm:items-center sm:justify-center sm:h-screen overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          className="absolute z-10 w-auto min-w-full min-h-full max-w-none brightness-75"
+        >
+          <source
+            src="https://res.cloudinary.com/damonjohnson/video/upload/v1669295293/Boa/Hero-short.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+              <div className="z-30 w-full md:mt-64">
+            <div className="lg:w-8/12 xl:w-7/12">
+            <h1 className="text-white font-semiboldsm:text-4xl lg:w-full md:text-4xl lg:text-6xl xl:text-8xl lg:ml-32">
+              Reusable Pallet Wraps
+            </h1>
+              <div className="mt-8 lg:flex lg:w-full lg:ml-32">
+                <p className="lg:text-2xl font-semibold text-white pr-10">
+                  A sustainable alternative to single use shrink wrap film
+                          </p>
+                          <div className="lg:relative lg:bottom-3">
+                <a href="/products">
+                  <button className="bg-primary font-semibold text-white py-3 lg:px-16 duration-100 rounded-md hover:text-blue-700">
+                    View products
+                  </button>
+                              </a>
+                              </div>
+                              </div>
+
+          </div>
+        </div>
+      </header>
+    </>
+  )
 }
 
 export default Hero

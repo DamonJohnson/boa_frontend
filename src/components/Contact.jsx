@@ -13,8 +13,8 @@ const Contact = () => {
             Contact Us
           </h2>
           <p className="mb-2 lg:mb-16 font-light text-center text-secondary sm:text-xl">
-            If you would like to know more about our products or services, or
-            offer some feedback, please do not hesitate to get in touch.
+            If you would like to know more about products or
+            offer some feedback send us a message to get in touch.
           </p>
           <form action="#" className="space-y-8">
             <div>
