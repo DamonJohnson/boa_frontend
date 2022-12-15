@@ -8,7 +8,7 @@ const NavbarLanding = () => {
   return (
     
     <nav  className="border-b-2 border-primary" style={
-{background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 55%, rgba(9,86,145,1) 85%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
+{background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 55%, rgba(9,86,145,1) 90%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)"}}>
   <div  className="container flex flex-wrap justify-between items-center mx-auto z-10">
     <a href="/"  className="flex items-center">
         <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1670396064/Boa/Boa_Wraps_scxfem.svg"  className="mr-0 xsm:h-10 md:h-16 l:h-20"alt="Boa Wraps Logo" />
