@@ -10,19 +10,15 @@ const Products = () => {
 
         <div className="flex lg:flex-row sm:flex-col">
           <div className="lg:w-1/4 lg:mx-5 md:w-1/2 md:mx-auto my-8 bg-white border border-grey rounded-lg shadow-md">
-            <a href="#">
               <img
                 className="rounded-t-lg"
                 src="https://res.cloudinary.com/damonjohnson/image/upload/v1670505545/Boa/IMG_4863_wym90n.jpg"
                 alt="A 1.5m high boa pallet wrap"
               />
-            </a>
             <div className="p-5">
-              <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary ">
                   Reusable Pallet Wrap 1.5m
                 </h5>
-              </a>
               <div className="h-24">
                   <p className="mb-3 font-normal text-secondary">
                 The big daddy of the boa wraps range. This pallet wrap is 1.5m
@@ -31,7 +27,7 @@ const Products = () => {
               </div>
             
               <a
-                href="#"
+                href="/product1"
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 View Product
@@ -61,11 +57,9 @@ const Products = () => {
               />
             </a>
             <div className="p-5">
-              <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary ">
                   Reusable Pallet Wrap 1.2m
                 </h5>
-              </a>
 
                                   <div className="h-24">
               <p className="mb-3 font-normal text-secondary">
@@ -73,7 +67,7 @@ const Products = () => {
                     </p>
                     </div>
               <a
-                href="#"
+                href="/product2"
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 View Product
@@ -94,68 +88,24 @@ const Products = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/4 lg:mx-5 md:w-1/2 md:mx-auto my-8 bg-white border border-grey rounded-lg shadow-md">
-            <a href="#">
-              <img
-                className="rounded-t-lg"
-                src="https://res.cloudinary.com/damonjohnson/image/upload/v1670505545/Boa/IMG_4863_wym90n.jpg"
-                alt="A 1.5m high boa pallet wrap"
-              />
-            </a>
-            <div className="p-5">
-              <a href="#">
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary ">
-                  Custom Order
-                </h5>
-              </a>
-                              <div className="h-24">
-              <p className="mb-3 font-normal text-secondary">
-                We can manufacture a fully customisable reusable pallet wrap to meet your needs.
-                </p>
-                </div>
-              <a
-                href="#"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
-              >
-                View Product
-                <svg
-                  aria-hidden="true"
-                  className="w-4 h-4 ml-2 -mr-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-                  </div>
 
                     <div className="lg:w-1/4 lg:mx-5 md:w-1/2 md:mx-auto my-8 bg-white border border-grey rounded-lg shadow-md">
-            <a href="#">
               <img
                 className="rounded-t-lg"
                 src="https://res.cloudinary.com/damonjohnson/image/upload/v1670505545/Boa/IMG_4863_wym90n.jpg"
                 alt="A 1.5m high boa pallet wrap"
               />
-            </a>
             <div className="p-5">
-              <a href="#">
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-secondary ">
                   Resuable Pallet Net
                 </h5>
-              </a>
                               <div className="h-24">
               <p className="mb-3 font-normal text-secondary">
                 The reusable pallet net is a lightweight, practical and cost effective solution. Fits a standard 1.2x1.2m pallet.
                 </p>
                 </div>
               <a
-                href="#"
+                href="/product4"
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
               >
                 View Product
@@ -175,11 +125,35 @@ const Products = () => {
               </a>
             </div>
                   </div>
-                  
-
-
         </div>
       </div>
+
+      <div className="text-secondary">
+        <h3>
+          Do you have special requirements?<br />
+          We can manufacture a fully customised solution to meet your needs.
+        </h3>
+                       <a
+                href="/product4"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+              >
+                Custom Order
+                <svg
+                  aria-hidden="true"
+                  className="w-4 h-4 ml-2 -mr-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a> 
+      </div>
+
     </section>
   )
 }

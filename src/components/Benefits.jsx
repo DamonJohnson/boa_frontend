@@ -3,7 +3,7 @@ import React from "react"
 const Benefits = () => {
   return (
     <section>
-      <div className="py-4 lg:py-8 px-4 mx-auto max-w-screen-2xl">
+      <div className="py-4 lg:py-28 px-4 mx-auto max-w-screen-2xl">
         <h2 className="mb-10 text-4xl tracking-tight font-extrabold text-center text-secondary">
           Why choose a Boa Reusable Pallet Wrap?
         </h2>
