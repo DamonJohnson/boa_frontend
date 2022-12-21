@@ -5,6 +5,7 @@ import Landing from "./Landing"
 import Contact from "./Contact"
 import Products from "./Products"
 import MyAccount from "./MyAccount"
+import Quote from "./Quote"
 import Footer from "./Footer"
 import Login from "./Login"
 import Registration from "./Registration"
@@ -26,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/products" element={<Products />} />
         <Route path="/my-account" element={<MyAccount />} />
+        <Route path="/quote" element={<Quote />} />
         <Route path="/product1" element={<Product1 />} />
         <Route path="/product2" element={<Product2 />} />
         <Route path="/product3" element={<Product3 />} />

@@ -1,20 +1,15 @@
-import React from "react"
+import React from 'react'
 
-const Contact = () => {
-  function submitEmail(event) {
-    emailjs.init("YOUR_PUBLIC_KEY")
-  }
-
+const Quote = () => {
   return (
-    <>
+     <>
       <section>
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-sm">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-secondary">
-            Contact Us
+            Request a Quote
           </h2>
           <p className="mb-2 lg:mb-16 text-center text-secondary">
-            If you would like to know more about products or
-            offer some feedback send us a message to get in touch.
+            Submit the form below for an obligation free quote
           </p>
           <form action="#" className="space-y-8">
             <div>
@@ -79,16 +74,16 @@ const Contact = () => {
             </div>
             <div>
               <label
-                for="subject"
+                for="product"
                 className="block mb-2 text-sm text-secondary font-medium"
               >
-                Subject
+                Product
               </label>
               <input
                 type="text"
                 id="subject"
                 className="block p-3 w-full text-sm text-secondary bg-pale-grey rounded-lg border border-secondary shadow-sm focus:ring-secondary focus:border-primary-500"
-                placeholder="Let us know how we can help you"
+                placeholder="Which product are you interested in?"
                 required
               />
             </div>
@@ -97,13 +92,13 @@ const Contact = () => {
                 for="message"
                 className="block mb-2 text-sm font-medium text-secondary "
               >
-                Your message
+                Details
               </label>
               <textarea
-                id="message"
+                id="details"
                 rows="6"
                 className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-lg shadow-sm border border-secondary focus:ring-secondary focus:border-primary-500"
-                placeholder="Leave a comment..."
+                placeholder="Describe the details of your order..."
               ></textarea>
             </div>
             <div className="flex flex-col items-center">
@@ -111,7 +106,7 @@ const Contact = () => {
                 type="submit"
                 className="py-3 px-10 text-sm font-medium text-center text-white rounded-lg  bg-secondary sm:w-fit  hover:ring-1"
               >
-                Send message
+                Submit
               </button>
               <p className="text-secondary text-sm pt-10">You will not be subscribed to a recurring mail service by submitting this form</p>
             </div>
@@ -122,4 +117,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Quote
