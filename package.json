@@ -8,7 +8,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "serve": "vite build && vite preview"
   },
   "dependencies": {
     "daisyui": "^2.42.0",
