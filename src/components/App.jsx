@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar"
 import Landing from "./Landing"
 import Contact from "./Contact"
-import Products from "./Products"
 import MyAccount from "./MyAccount"
 import Store from "./Store"
 import Quote from "./Quote"
@@ -26,7 +25,6 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
         <Route path="/my-account" element={<MyAccount />} />
         <Route path="/store" element={<Store />} />
         <Route path="/quote" element={<Quote />} />

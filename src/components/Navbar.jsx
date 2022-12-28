@@ -26,7 +26,7 @@ const NavbarLanding = () => {
           <a href="/contact"  className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0">Contact</a>
             </li>
             <li>
-          <a href="/quote"  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0">Custom Orders</a>
+          <a href="/faq"  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0">FAQs</a>
             </li>
             <li>
                   <a href="/store" >
