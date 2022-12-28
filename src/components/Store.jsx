@@ -1,7 +1,7 @@
 import React from "react"
-import ImageCarousel from "../ImageCarousel"
+import ImageCarousel from "./ImageCarousel"
 
-const Product1 = () => {
+const Store = () => {
 
     const data = [
     {
@@ -50,7 +50,7 @@ const Product1 = () => {
           <div className="mt-8 lg:w-1/2 lg:px-6 lg:mt-0">
 
             <h1 className="text-3xl font-semibold text-secondary lg:text-4xl lg:w-100">
-              1.5m Reusable Pallet Wrap
+              Boa Reusable Pallet Wrap
             </h1>
 
             <ul className="max-w-lg mt-6 secondary">
@@ -226,4 +226,4 @@ const Product1 = () => {
   )
 }
 
-export default Product1
+export default Store

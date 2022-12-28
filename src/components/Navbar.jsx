@@ -23,15 +23,15 @@ const NavbarLanding = () => {
           <a href="/"  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary" aria-current="page">Home</a>
         </li>
         <li>
-          <a href="/products"  className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0">Products</a>
+          <a href="/contact"  className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0">Contact</a>
             </li>
             <li>
-          <a href="/contact"  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0">Contact</a>
+          <a href="/quote"  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0">Custom Orders</a>
             </li>
             <li>
-                  <a href="/quote" >
+                  <a href="/store" >
                 <button className="bg-primary text-white py-3 px-4  border- duration-100 rounded-l-xl rounded-tr-xl hover:text-blue-700">
-                Get a quote today!
+                View Store
               </button>
               </a>            
             </li>

@@ -24,14 +24,14 @@ const Hero = () => {
                             <h1 className="text-white font-semibold sm:text-4xl lg:w-11/12 md:text-2xl lg:text-6xl ">
                                 Reusable Pallet Wraps
                             </h1>
-                            <div className="mt-8 lg:flex">
-                                <p className="text-white font-semibold sm:text-xl lg:w-8/12 lg:text-xl">
+                            <div className="mt-6 lg:flex">
+                                <p className="text-white font-semibold sm:text-lg lg:w-8/12 lg:text-l mr-8">
                                     A sustainable alternative to single use shrink wrap film
                                 </p>
                                 <div className="lg:relative lg:bottom-2">
-                                    <a href="/products">
-                                        <button className="bg-primary font-semibold w-full text-white py-3 lg:px-14 duration-100 rounded-l-lg rounded-tr-lg hover:text-blue-700">
-                                            View products
+                                    <a href="/store">
+                                        <button className="bg-primary font-semibold w-full text-white py-3 lg:px-8 duration-100 rounded-l-lg rounded-tr-lg hover:text-blue-700">
+                                            View Store
                                         </button>
                                     </a>
                                 </div>

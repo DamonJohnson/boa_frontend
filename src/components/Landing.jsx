@@ -8,7 +8,6 @@ const Landing = () => {
     <div>
         < Hero />
         < Benefits />
-        <Products />
      </div>
   )
 }
