@@ -5,6 +5,7 @@ import Contact from "./Contact"
 import Store from "./Store"
 import Quote from "./Quote"
 import Footer from "./Footer"
+import Cart from "./Cart"
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/store" element={<Store />} />
         <Route path="/quote" element={<Quote />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />
     </BrowserRouter>

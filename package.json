@@ -12,6 +12,8 @@
     "serve": "vite build && vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.7",
+    "@heroicons/react": "^2.0.13",
     "daisyui": "^2.42.0",
     "react": "^18.2.0",
     "react-carousel-minimal": "^1.4.1",

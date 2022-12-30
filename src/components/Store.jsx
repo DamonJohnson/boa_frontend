@@ -39,7 +39,7 @@ const Store = () => {
     
     const [price, setPrice] = useState()
     const [quantity, setQuantity] = useState(1)
-    const [height, setHeight] = useState()
+    const [height, setHeight] = useState(1200)
 
     const priceList = { '1200': 9999, '1500': 12999 }
 
@@ -87,12 +87,12 @@ const Store = () => {
                 name="quantity"
                 className="w-10 pl-1"
                 min="1"
-                max="50"
+                max="20"
                 onChange={(e) => setQuantity(e.target.value)}               
               ></input>
 
            
-                            <p className="font-semibold">Price: {total !== null ? total / 100 : ''}</p>
+                            <p className="font-semibold">Price: ${total !== null ? total / 100 : ''}</p>
                             
                                <button
                 href="/product4"

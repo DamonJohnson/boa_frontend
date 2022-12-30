@@ -16,7 +16,7 @@ const Hero = () => {
                     />
                     Your browser does not support the video tag.
                 </video>
-                <div className="z-30 mr-auto md:mt-64">
+                <div className="z-30 ml-auto mr-64 md:mt-64">
                     <div className="bg-secondary border-primary border-2 lg:ml-16 lg:w-full lg:py-6 rounded-l-3xl rounded-tr-3xl"
                         style={
                             { background: "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 45%, rgba(9,86,145,1) 90%, rgba(26,48,62,1) 100%, rgba(38,36,61,1) 100%)" }}>
