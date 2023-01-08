@@ -1,9 +1,10 @@
 import { useEffect } from "react"
 import { useState, react } from "react"
-import ImageCarousel from "./ImageCarousel"
+import ImageCarousel from "../components/ImageCarousel"
+import { formatCurrency } from "../utilities/formatCurrency"
 
 const Store = () => {
-  const data = [
+  const images = [
     {
       image:
         "https://res.cloudinary.com/damonjohnson/image/upload/v1672232434/Boa/Untitled_design_o6a2z9.png",
@@ -41,7 +42,7 @@ const Store = () => {
     const [quantity, setQuantity] = useState(1)
     const [height, setHeight] = useState(1200)
 
-    const priceList = { '1200': 9999, '1500': 12999 }
+    const priceList = { '1200': 9700, '1500': 12700 }
 
     const total = priceList[height] * quantity
 
@@ -50,56 +51,56 @@ const Store = () => {
 
 
     <section>
-      <div className="container px-6 py-10 mx-auto">
-        <div className="lg:-mx-6 lg:flex lg:items-center">
-          <ImageCarousel data={data} />
-          <div className="xl:mx-32 lg:mx-8 sm:px-8 sm:py-8 sm:mt-40 lg:mt-0 bg-pale-grey rounded-lg text-secondary">
-            <h1 className="text-xl font-semibold text-secondary lg:text-xl lg:w-100">
-              Boa Reusable Pallet Wrap
-            </h1>
+<div className="container px-6 py-10 mx-auto">
+  <div className="lg:-mx-6 lg:flex lg:items-center">
+    <ImageCarousel data={images} />
+    <div className="xl:mx-32 lg:mx-8 sm:px-8 sm:py-8 sm:mt-40 lg:mt-0 bg-pale-grey rounded-lg text-secondary">
+      <h1 className="text-xl font-semibold text-secondary lg:text-xl lg:w-100">
+        Boa Reusable Pallet Wrap
+      </h1>
 
-            <ul className="max-w-lg mt-6 secondary">
-              <li className="font-semibold">Item Details:</li>
-              <li>Pallet Size: 1.2 x 1.2m</li>
-              <li>Mesh Length: 4m</li>
-              <li>Material: PVC Mesh</li>
-              <li>Colour: Black</li>
-              <li></li>
-            </ul>
+      <ul className="max-w-lg mt-6 secondary">
+        <li className="font-semibold">Item Details:</li>
+        <li>Pallet Size: 1.2 x 1.2m</li>
+        <li>Mesh Length: 4m</li>
+        <li>Material: PVC Mesh</li>
+        <li>Colour: Black</li>
+        <li></li>
+      </ul>
 
-            <div className="flex items-center justify-between mt-12 space-x-8 lg:justify-start">
-              <div className="flex justify-center">
-                <label className="font-semibold pr-6" htmlFor="height">
-                  Height:
-                </label>
-                <select name="height" id="height" onChange={(e) => setHeight(e.target.value)} >
-                  <option value="1200">1.2m</option>
-                  <option value="1500">1.5m</option>
-                </select>
-              </div>
+      <div className="flex items-center justify-between mt-12 space-x-8 lg:justify-start">
+        <div className="flex justify-center">
+          <label className="font-semibold pr-6" htmlFor="height">
+            Height:
+          </label>
+          <select name="height" id="height" onChange={(e) => setHeight(e.target.value)} >
+            <option value="1200">1.2m</option>
+            <option value="1500">1.5m</option>
+          </select>
+        </div>
 
-              <label className="font-semibold" for="quantity">
-                Quantity:
-              </label>
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                className="w-10 pl-1"
-                min="1"
-                max="20"
-                onChange={(e) => setQuantity(e.target.value)}               
-              ></input>
+        <label className="font-semibold" for="quantity">
+          Quantity:
+        </label>
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          className="w-10 pl-1"
+          min="1"
+          max="20"
+          onChange={(e) => setQuantity(e.target.value)}               
+        ></input>
+      </div>
 
-           
-                            <p className="font-semibold">Price: ${total !== null ? total / 100 : ''}</p>
-                            
-                               <button
-                href="/product4"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
-              >
-                Add to cart
-                <svg
+      <div className="flex items-center mt-12 space-x-8 lg:justify-start">
+        <p className="font-semibold">Price: {total !== null ? formatCurrency(total/100) : ''}</p>
+        <button
+          href="/product4"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+        >
+          Add to cart
+             <svg
                   aria-hidden="true"
                   className="w-4 h-4 ml-2 -mr-1"
                   fill="currentColor"

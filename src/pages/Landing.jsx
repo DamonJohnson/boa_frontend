@@ -1,6 +1,6 @@
 import React from 'react'
-import Hero from "./Hero"
-import Benefits from "./Benefits"
+import Hero from "../components/Hero"
+import Benefits from "../components/Benefits"
 
 const Landing = () => {
     return (

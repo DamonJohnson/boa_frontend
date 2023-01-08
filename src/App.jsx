@@ -1,11 +1,16 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Navbar"
-import Landing from "./Landing"
-import Contact from "./Contact"
-import Store from "./Store"
-import Quote from "./Quote"
-import Footer from "./Footer"
-import Cart from "./Cart"
+
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Cart from "./components/Cart"
+
+import Landing from "./pages/Landing"
+import Contact from "./pages/Contact"
+import Store from "./pages/Store"
+import Quote from "./pages/Quote"
+import Success from "./pages/Success"
+import Cancel from "./pages/Cancel"
+
 
 
 function App() {
@@ -19,6 +24,8 @@ function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/quote" element={<Quote />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/success" element={<Success />} />
+        <Route path="/cancel" element={<Cancel />} />
       </Routes>
       <Footer />
     </BrowserRouter>
