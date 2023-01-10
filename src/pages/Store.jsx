@@ -1,54 +1,18 @@
-import { useEffect } from "react"
-import { useState, react } from "react"
+
+import { useState, useEffect, react } from "react"
 import ImageCarousel from "../components/ImageCarousel"
 import { formatCurrency } from "../utilities/formatCurrency"
+import { products } from "../data/Products"
+import { images } from "../assets/Images"
 
 const Store = () => {
-  const images = [
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672232434/Boa/Untitled_design_o6a2z9.png",
-      alt: "frontview image 1",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672232246/Boa/HTB1qBtGCntYBeNjy1Xdq6xXyVXaF_sycwcs.webp",
-      alt: "frontview image 2",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672231925/Boa/HTB19k9tGAyWBuNjy0Fpq6yssXXan.jpg_960x960_adx9yn.webp",
-      alt: "corner strap",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672231925/Boa/HTB141qIBVGWBuNjy0Fbq6z4sXXaS.jpg_960x960_inctyq.webp",
-      alt: "diagonal view",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672231926/Boa/HTB1276PB49YBuNjy0Ffq6xIsVXa6.jpg_960x960_yzpya7.webp",
-      alt: "backview",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/damonjohnson/image/upload/v1672231925/Boa/HTB1i7VUGAKWBuNjy1zjq6AOypXay.jpg_960x960_bqfdzv.webp",
-      alt: "document sleeve",
-    },
 
-  ]
-    
-    const [price, setPrice] = useState()
+
     const [quantity, setQuantity] = useState(1)
-    const [height, setHeight] = useState(1200)
-
-    const priceList = { '1200': 9700, '1500': 12700 }
-
-    const total = priceList[height] * quantity
+    const [activeProduct, setActiveProduct] = useState(products.find(product => product.id === '001'))
+    const total = quantity * activeProduct.price
 
     return (
-      
-
 
     <section>
 <div className="container px-6 py-10 mx-auto">
@@ -56,7 +20,7 @@ const Store = () => {
     <ImageCarousel data={images} />
     <div className="xl:mx-32 lg:mx-8 sm:px-8 sm:py-8 sm:mt-40 lg:mt-0 bg-pale-grey rounded-lg text-secondary">
       <h1 className="text-xl font-semibold text-secondary lg:text-xl lg:w-100">
-        Boa Reusable Pallet Wrap
+       {products[0].name}
       </h1>
 
       <ul className="max-w-lg mt-6 secondary">
@@ -73,9 +37,9 @@ const Store = () => {
           <label className="font-semibold pr-6" htmlFor="height">
             Height:
           </label>
-          <select name="height" id="height" onChange={(e) => setHeight(e.target.value)} >
-            <option value="1200">1.2m</option>
-            <option value="1500">1.5m</option>
+          <select name="height" id="height" onChange={(e) => setActiveProduct(products.find(product => product.id === e.target.value))} >
+            <option value="001">1.2m</option>
+            <option value="002">1.5m</option>
           </select>
         </div>
 
