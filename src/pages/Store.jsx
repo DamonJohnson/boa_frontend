@@ -1,8 +1,9 @@
-import { useState, useEffect, react } from "react"
+import { useState, useContext } from "react"
 import ImageCarousel from "../components/ImageCarousel"
 import { formatCurrency } from "../utilities/formatCurrency"
 import { products } from "../data/Products"
 import { images } from "../assets/Images"
+import { StoreContext } from "../context/StoreContext"
 
 const Store = () => {
   const [quantity, setQuantity] = useState(1)
@@ -10,6 +11,9 @@ const Store = () => {
     products.find((product) => product.id === "001")
   )
   const total = quantity * activeProduct.price
+  const { addToCart } = useContext(StoreContext)
+
+
 
   return (
     <section>
@@ -57,6 +61,7 @@ const Store = () => {
                 id="quantity"
                 name="quantity"
                 className="w-10 pl-1"
+                placeholder="1"
                 min="1"
                 max="20"
                 onChange={(e) => setQuantity(e.target.value)}
@@ -70,6 +75,7 @@ const Store = () => {
               <button
                 href="/product4"
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+                onClick={() => addToCart(activeProduct.id, parseInt(quantity))}
               >
                 Add to cart
                 <svg
