@@ -5,8 +5,9 @@ export default function CartItem (props) {
     const { id, productName, price, imageSrc, imageAlt } = props.data
 
   return (
-    <>
-      <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+      <>
+          <p>{productName}</p>
+      {/* <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
         <img
           src={product.imageSrc}
           alt={product.imageAlt}
@@ -36,7 +37,7 @@ export default function CartItem (props) {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   )
 }

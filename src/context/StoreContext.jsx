@@ -3,26 +3,26 @@ import { useState, createContext } from 'react'
 
 export const StoreContext = createContext(null)
 
-const defaultCart = {
+const defaultQuantity = {
   '001': 0,
   '002': 0
 }
 
 export const StoreContextProvider = (props) => {
 
-  const [cartItems, setCartItems] = useState(defaultCart)
+  const [cartQuantity, setCartQuantity] = useState(defaultQuantity)
 
   const addToCart = (itemId, quantity) => {
-    setCartItems((prev) => ({...prev, [itemId]: (prev[itemId] + quantity)}))
+    setCartQuantity((prev) => ({...prev, [itemId]: (prev[itemId] + quantity)}))
   }
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
+    setCartQuantity((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
   }
 
-  const contextValue = {cartItems, addToCart, removeFromCart}
+  const contextValue = {cartQuantity, addToCart, removeFromCart}
 
-  console.log(cartItems)
+  console.log(cartQuantity)
 
   return (
     <StoreContext.Provider value={contextValue} >
