@@ -11,9 +11,9 @@ const Store = () => {
     products.find((product) => product.id === "001")
   )
   const total = quantity * activeProduct.price
-  const { addToCart } = useContext(StoreContext)
+  const { addToCart, cartItems } = useContext(StoreContext)
 
-
+  const cartItemAmount = cartItems[activeProduct.id]
 
   return (
     <section>
@@ -77,7 +77,7 @@ const Store = () => {
                 className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
                 onClick={() => addToCart(activeProduct.id, parseInt(quantity))}
               >
-                Add to cart
+                Add to cart {cartItemAmount > 0 && <>({cartItemAmount})</>}
                 <svg
                   aria-hidden="true"
                   className="w-4 h-4 ml-2 -mr-1"

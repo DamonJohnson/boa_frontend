@@ -76,6 +76,7 @@ const NavbarLanding = () => {
                   Store
                 </a>
               </li>
+              <a href="/cart">
               <button className="w-10 rounded-full relative border-2 border-primary">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -98,9 +99,10 @@ const NavbarLanding = () => {
                     transform: "translate(25%, 25%)",
                   }}
                 >
-                  10 {/* {cartQuantity} */}
+                  10 
                 </div>
-              </button>
+                </button>
+                </a>
             </ul>
           </div>
         </div>
