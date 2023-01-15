@@ -22,7 +22,7 @@ export const StoreContextProvider = (props) => {
 
   const contextValue = {cartQuantity, addToCart, removeFromCart}
 
-  console.log(cartQuantity)
+  // console.log(cartQuantity)
 
   return (
     <StoreContext.Provider value={contextValue} >
