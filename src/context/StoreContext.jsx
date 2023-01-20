@@ -16,6 +16,10 @@ export const StoreContextProvider = (props) => {
     setCartQuantity((prev) => ({...prev, [itemId]: (prev[itemId] + quantity)}))
   }
 
+    const addOneToCart = (itemId) => {
+    setCartQuantity((prev) => ({...prev, [itemId]: prev[itemId] + 1}))
+  }
+
   const removeOneFromCart = (itemId) => {
     setCartQuantity((prev) => ({...prev, [itemId]: prev[itemId] - 1}))
   }
@@ -24,7 +28,7 @@ export const StoreContextProvider = (props) => {
     setCartQuantity((prev) => ({...prev, [itemId]: prev[itemId] - cartQuantity[itemId]}))
   }
 
-  const contextValue = {cartQuantity, addToCart, removeOneFromCart, removeAllFromCart}
+  const contextValue = {cartQuantity, addToCart, addOneToCart, removeOneFromCart, removeAllFromCart}
 
   return (
     <StoreContext.Provider value={contextValue} >

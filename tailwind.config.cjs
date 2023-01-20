@@ -8,7 +8,7 @@ module.exports = {
       navcolor: "#BF3100",
       white: "#f8fafc",
       black: "#000000",
-      grey: "#DEE5E5",
+      grey: "#c5c9c9",
       "pale-grey": "#DEE5E5",
       rust: "#BF3100",
       orange: "#FFA630",
