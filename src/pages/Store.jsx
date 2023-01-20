@@ -1,4 +1,5 @@
 import { useState, useContext } from "react"
+import { Link } from "react-router-dom"
 import ImageCarousel from "../components/ImageCarousel"
 import { formatCurrency } from "../utilities/formatCurrency"
 import { products } from "../data/Products"
@@ -14,6 +15,8 @@ const Store = () => {
   const { addToCart, cartQuantity } = useContext(StoreContext)
 
   const cartItemQuantity = cartQuantity[activeProduct.id]
+
+  console.log(cartItemQuantity)
 
   return (
     <section>
@@ -106,8 +109,8 @@ const Store = () => {
             We can manufacture a fully customised solution to meet your needs.
           </p>
           <div className="sm:text-center">
-            <a
-              href="/quote"
+            <Link
+              to="/quote"
               className="sm:inline-flex sm:items-center px-3 py-2 text-sm font-medium sm:text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
             >
               Custom Order
@@ -124,7 +127,7 @@ const Store = () => {
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
