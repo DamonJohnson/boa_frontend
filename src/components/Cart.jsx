@@ -84,7 +84,7 @@ export default function Cart() {
                         <p>Subtotal</p>
                         <p>$262.00</p>
                       </div>
-                      <p className="mt-0.5 text-sm text-secondary">Shipping and taxes calculated at checkout.</p>
+                      <p className="mt-0.5 text-sm text-secondary">Shipping calculated at checkout.</p>
                       <div className="mt-6">
                         <a
                           href="#"
