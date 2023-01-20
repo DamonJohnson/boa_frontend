@@ -16,8 +16,6 @@ const Store = () => {
 
   const cartItemQuantity = cartQuantity[activeProduct.id]
 
-  console.log(cartItemQuantity)
-
   return (
     <section>
       <div className="container px-6 py-10 mx-auto">
