@@ -4,6 +4,7 @@ import { XMarkIcon } from '@heroicons/react/24/outline'
 import { products } from '../data/Products'
 import { StoreContext } from '../context/StoreContext'
 import CartItem from './CartItem'
+import { formatCurrency } from '../utilities/formatCurrency'
 
 
 export default function Cart() {
@@ -11,6 +12,10 @@ export default function Cart() {
   const [open, setOpen] = useState(true)
 
   const { cartQuantity } = useContext(StoreContext)
+
+  const productTotals = products.map(product => product.price * cartQuantity[product.id])
+  const totalCartPrice = formatCurrency(productTotals.reduce((a, b) => a + b, 0 )/100)
+
 
 
 
@@ -82,7 +87,7 @@ export default function Cart() {
                     <div className="border-t border-grey py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-secondary">
                         <p>Subtotal</p>
-                        <p>$262.00</p>
+                        <p>{totalCartPrice}</p>
                       </div>
                       <p className="mt-0.5 text-sm text-secondary">Shipping calculated at checkout.</p>
                       <div className="mt-6">

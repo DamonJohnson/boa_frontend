@@ -6,7 +6,6 @@ function App({ data }) {
     <div className="App">
           <Carousel
             data={data}
-            time={2000}
             width="700px"
             height="500px"
             radius="10px"
