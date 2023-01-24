@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { products } from '../data/Products'
 import { StoreContext } from '../context/StoreContext'
-import CartItem from './CartItem'
+import CartItem from './OldCartItem'
 import { formatCurrency } from '../utilities/formatCurrency'
 
 
@@ -65,6 +65,7 @@ export default function Cart() {
                       </div>
 
                       <div className="mt-8">
+                        
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-grey">
                             {products.map((product) => {

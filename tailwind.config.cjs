@@ -7,12 +7,14 @@ module.exports = {
       secondary: "#0A5071",
       navcolor: "#BF3100",
       white: "#f8fafc",
+      "off-white": "#F6F6F6",
       black: "#000000",
       grey: "#c5c9c9",
       "pale-grey": "#DEE5E5",
       rust: "#BF3100",
       orange: "#FFA630",
       "blue-700": "#1d4ed8",
+      "gray-600": "#4b5563",
     },
     variables: {
       "hero-video":

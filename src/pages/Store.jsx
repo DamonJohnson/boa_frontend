@@ -21,7 +21,7 @@ const Store = () => {
       <div className="container px-6 py-10 mx-auto">
         <div className="lg:-mx-6 lg:flex lg:items-center">
           <ImageCarousel data={images} />
-          <div className="xl:mx-32 lg:mx-8 sm:px-8 sm:py-8 sm:mt-40 lg:mt-0 bg-pale-grey rounded-lg text-secondary">
+          <div className="xl:mx-32 lg:mx-8 sm:px-8 sm:py-8 sm:mt-40 lg:mt-0 bg-white rounded-lg text-secondary">
             <h1 className="text-xl font-semibold text-secondary lg:text-xl lg:w-100">
               {products[0].name}
             </h1>
@@ -41,6 +41,7 @@ const Store = () => {
                   Height:
                 </label>
                 <select
+                  className="text-center border rounded-md border-pale-grey"
                   name="height"
                   id="height"
                   onChange={(e) =>
@@ -58,10 +59,10 @@ const Store = () => {
                 Quantity:
               </label>
               <input
+                className="text-center border rounded-md border-pale-grey"
                 type="number"
                 id="quantity"
                 name="quantity"
-                className="w-10 pl-1"
                 placeholder="1"
                 min="1"
                 max="20"
