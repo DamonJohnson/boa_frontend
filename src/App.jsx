@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 import ShoppingCart from "./components/ShoppingCart"
 
+import Checkout from "./pages/Checkout"
 import Landing from "./pages/Landing"
 import Contact from "./pages/Contact"
 import Faq from "./pages/Faq"
@@ -29,6 +30,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

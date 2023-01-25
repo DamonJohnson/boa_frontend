@@ -21,7 +21,8 @@
     "react-carousel-minimal": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
-    "react-router-dom": "^6.5.0"
+    "react-router-dom": "^6.5.0",
+    "stripe": "^11.7.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.17",
