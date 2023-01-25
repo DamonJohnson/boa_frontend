@@ -6,8 +6,8 @@ import { StoreContext } from "../context/StoreContext"
 
 const Navbar = () => {
   
-  const { cartQuantity } = useContext(StoreContext)
-  const totalCartQuantity = Object.values(cartQuantity).reduce((a, b) => {return a + b})
+  const { cartQuantity, totalCartQuantity } = useContext(StoreContext)
+  // const totalCartQuantity = Object.values(cartQuantity).reduce((a, b) => {return a + b})
 
   return (
     <>

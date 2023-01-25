@@ -30,7 +30,7 @@ const Hero = () => {
                                 </p>
                                 <div className="lg:relative lg:bottom-2">
                                     <a href="/store">
-                                        <button className="bg-primary font-semibold w-full text-white py-3 lg:px-8 duration-100 rounded-l-lg rounded-tr-lg hover:text-blue-700">
+                                        <button className="bg-primary font-semibold w-full text-white py-3 lg:px-8 duration-100 rounded-l-lg rounded-tr-lg hover:ring-4">
                                             View Store
                                         </button>
                                     </a>

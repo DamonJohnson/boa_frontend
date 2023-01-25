@@ -20,10 +20,10 @@ const CartItem = (props) => {
                           </div>
                           <div class="flex flex-col justify-between ml-4 flex-grow">
                   <span class="font-bold text-sm">{name}</span>
-                  <span class="text-red-500 text-xs">Height: {height / 1000}m</span>
+                  <span class="text-red-500 text-sm">Height: {height / 1000}m</span>
                             <button
                               onClick = { () => removeAllFromCart(id) }
-                              class="font-semibold hover:text-red-500 text-gray-500 text-xs"
+                              class="font-semibold hover:text-red-500 text-gray-500 text-sm text-left"
                             >
                               Remove
                             </button>

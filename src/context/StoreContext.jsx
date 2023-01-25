@@ -28,7 +28,10 @@ export const StoreContextProvider = (props) => {
     setCartQuantity((prev) => ({...prev, [itemId]: prev[itemId] - cartQuantity[itemId]}))
   }
 
-  const contextValue = {cartQuantity, addToCart, addOneToCart, removeOneFromCart, removeAllFromCart}
+  const totalCartQuantity = Object.values(cartQuantity).reduce((a, b) => {return a + b})
+
+
+  const contextValue = {cartQuantity, totalCartQuantity, addToCart, addOneToCart, removeOneFromCart, removeAllFromCart}
 
   return (
     <StoreContext.Provider value={contextValue} >

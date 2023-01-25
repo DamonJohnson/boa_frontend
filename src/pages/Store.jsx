@@ -76,7 +76,7 @@ const Store = () => {
               </p>
               <button
                 href="/product4"
-                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+                className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:ring-2"
                 onClick={() => addToCart(activeProduct.id, parseInt(quantity))}
               >
                 Add to cart {cartItemQuantity > 0 && <>({cartItemQuantity})</>}
@@ -110,7 +110,7 @@ const Store = () => {
           <div className="sm:text-center">
             <Link
               to="/quote"
-              className="sm:inline-flex sm:items-center px-3 py-2 text-sm font-medium sm:text-center text-white bg-primary rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
+              className="sm:inline-flex sm:items-center px-3 py-2 text-sm font-medium sm:text-center text-white bg-primary hover:ring-2 rounded-lg focus:ring-3 focus:outline-none focus:ring-blue-300"
             >
               Custom Order
               <svg

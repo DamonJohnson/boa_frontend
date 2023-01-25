@@ -27,7 +27,7 @@ const Contact = () => {
               <input
                 type="firstname"
                 id="firstname"
-                className="shadow-sm mb-6 bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm mb-6 bg-pale-grey border border-secondary text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="John"
                 required
               />
@@ -42,7 +42,7 @@ const Contact = () => {
               <input
                 type="lastname"
                 id="lastname"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="Doe"
                 required
               />
@@ -57,7 +57,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="name@acme.com"
                 required
               />
@@ -72,7 +72,7 @@ const Contact = () => {
               <input
                 type="mobile"
                 id="mobile"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
+                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
                 placeholder="0412 345 678"
                 required
               />
@@ -87,7 +87,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="subject"
-                className="block p-3 w-full text-sm text-secondary bg-pale-grey rounded-lg border border-secondary shadow-sm focus:ring-secondary focus:border-primary-500"
+                className="block p-3 w-full text-sm text-secondary bg-pale-grey rounded-md border border-secondary shadow-sm focus:ring-secondary focus:border-primary-500"
                 placeholder="Let us know how we can help you"
                 required
               />
@@ -102,14 +102,14 @@ const Contact = () => {
               <textarea
                 id="message"
                 rows="6"
-                className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-lg shadow-sm border border-secondary focus:ring-secondary focus:border-primary-500"
+                className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-md shadow-sm border border-secondary focus:ring-secondary focus:border-primary-500"
                 placeholder="Leave a comment..."
               ></textarea>
             </div>
             <div className="flex flex-col items-center">
               <button
                 type="submit"
-                className="py-3 px-10 text-sm font-medium text-center text-white rounded-lg  bg-secondary sm:w-fit  hover:ring-1"
+                className="py-3 px-10 text-sm font-medium text-center text-white rounded-md  bg-secondary sm:w-fit hover:ring-2"
               >
                 Send message
               </button>
