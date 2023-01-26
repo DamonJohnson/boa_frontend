@@ -26,13 +26,35 @@ const ShoppingCart = () => {
     //         return 65
     //     } if (totalCartQuantity > 5) {
     //         return totalCartQuantity * 15
-    //     } 
+    //     }
     //   }
   
+  const cartItems = [
+    { id: 1, quantity: cartQuantity['001']},
+    { id: 2, quantity: cartQuantity['002']}
+  ]
+  
     
-    // const checkoutPrice = formatCurrency(
-    // (totalCartPrice + shippingPrice) / 100
-    // )
+  function checkout() {
+    console.log(cartQuantity[0])
+    fetch("http://localhost:3001/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+      body: JSON.stringify({ cartItems }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
+    }
 
   return (
     <div>
@@ -120,12 +142,8 @@ const ShoppingCart = () => {
                 <div className="flex font-semibold justify-between py-6 text-sm uppercase">
                   <span>Total cost</span>
                                   <span>{totalCartPrice}</span>
-                              </div>
-                              <Link
-                                  to="/checkout"
-                              >                 
-                  <button className="bg-primary font-semibold py-3 text-sm text-white uppercase w-full rounded-md hover:ring-2">Checkout</button>   
-                 </Link>
+                              </div>              
+                <button className="bg-primary font-semibold py-3 text-sm text-white uppercase w-full rounded-md hover:ring-2" onClick={() => checkout()}>Checkout</button>   
               </div>
             </div>
           </div>

@@ -14,7 +14,7 @@ const Store = () => {
   const total = quantity * activeProduct.price
   const { addToCart, cartQuantity } = useContext(StoreContext)
 
-  const cartItemQuantity = cartQuantity[activeProduct.id]
+    const cartItemQuantity = cartQuantity[activeProduct.id]
 
   return (
     <section>
