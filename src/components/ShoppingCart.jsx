@@ -58,7 +58,7 @@ const ShoppingCart = () => {
 
   return (
     <div>
-      <body className="bg-gray-100 text-secondary rounded-lg">
+      <body className=" text-secondary rounded-lg">
         <div className="container mx-auto mt-10">
           <div className="flex shadow-md my-10">
             <div className="w-3/4 bg-white px-10 py-10">

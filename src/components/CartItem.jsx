@@ -9,30 +9,30 @@ const CartItem = (props) => {
     const { cartQuantity, addOneToCart, removeOneFromCart, removeAllFromCart } = useContext(StoreContext)
     
   return (
-    <div> <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                        <div class="flex w-2/5">
-                          <div class="w-20">
+    <div> <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
+                        <div className="flex w-2/5">
+                          <div className="w-20">
                             <img
-                              class="h-24"
+                              className="h-24"
                               src={imageSrc}
                               alt={imageAlt}
                             ></img>
                           </div>
-                          <div class="flex flex-col justify-between ml-4 flex-grow">
-                  <span class="font-bold text-sm">{name}</span>
-                  <span class="text-red-500 text-sm">Height: {height / 1000}m</span>
+                          <div className="flex flex-col justify-between ml-4 flex-grow">
+                  <span className="font-bold text-sm">{name}</span>
+                  <span className="text-sm">Height: {height / 1000}m</span>
                             <button
                               onClick = { () => removeAllFromCart(id) }
-                              class="font-semibold hover:text-red-500 text-gray-500 text-sm text-left"
+                              className="font-semibold hover:text-rust text-sm text-left"
                             >
                               Remove
                             </button>
                           </div>
                         </div>
-                        <div class="flex justify-center border-secondary w-1/5">
+                        <div className="flex justify-center border-secondary w-1/5">
                             <button onClick = {() => removeOneFromCart(id)}>
                           <svg
-                            class="fill-secondary w-3 hover:fill-primary"
+                            className="fill-secondary w-3 hover:fill-primary"
                             viewBox="0 0 448 512"
                           >
                             <path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
@@ -40,22 +40,22 @@ const CartItem = (props) => {
                   </button>
 
                           <span
-                            class="mx-2 text-center border rounded-md border-pale-grey w-8"
+                            className="mx-2 text-center border rounded-md border-pale-grey w-8"
                             type="text"   
                           >{cartQuantity[id]}</span>
                         <button onClick = {() => addOneToCart(id)}>
                           <svg
-                            class="fill-secondary w-3 hover:fill-primary"
+                            className="fill-secondary w-3 hover:fill-primary"
                             viewBox="0 0 448 512"
                           >
                             <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z" />
                   </svg>
                   </button>
                         </div>
-                        <span class="text-center w-1/5 font-semibold text-sm">
+                        <span className="text-center w-1/5 font-semibold text-sm">
                           {formatCurrency(price/100)}
                         </span>
-                        <span class="text-center w-1/5 font-semibold text-sm">
+                        <span className="text-center w-1/5 font-semibold text-sm">
                           {formatCurrency((price * cartQuantity[id]) / 100)}
                         </span>
                       </div></div>
