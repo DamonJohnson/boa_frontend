@@ -150,7 +150,7 @@ const Store = () => {
                                             name="quantity"
                                             placeholder="1"
                                             min="1"
-                                            max="20"
+                                            max="99"
                                             onChange={(e) => setQuantity(e.target.value)}
                                         ></input>
                                     </div>
