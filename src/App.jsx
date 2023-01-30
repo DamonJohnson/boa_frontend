@@ -13,6 +13,7 @@ import Quote from "./pages/Quote"
 import Success from "./pages/Success"
 import Cancel from "./pages/Cancel"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
+import TermsOfService from "./pages/TermsOfService"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/success" element={<Success />} />
           <Route path="/cancel" element={<Cancel />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
         <Footer />
       </BrowserRouter>
