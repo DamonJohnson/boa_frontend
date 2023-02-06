@@ -2,13 +2,29 @@ import React from "react"
 import { Link, useLocation } from "react-router-dom"
 import { useContext } from "react"
 import { StoreContext } from "../context/StoreContext"
+import { useState, useEffect } from "react";
+import {
+  Navbar,
+  MobileNav,
+  Typography,
+  Button,
+  IconButton,
+} from "@material-tailwind/react";
 
 
-const Navbar = () => {
+const Nav = () => {
   
   const { cartQuantity, totalCartQuantity } = useContext(StoreContext)
-  // const totalCartQuantity = Object.values(cartQuantity).reduce((a, b) => {return a + b})
-
+  const [openNav, setOpenNav] = useState(false);
+ 
+  useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
+    );
+  }, []);
+ 
+ 
   return (
     <>
       <nav
@@ -27,29 +43,94 @@ const Navbar = () => {
             />
           </Link>
 
-          <button
-            data-collapse-toggle="navbar-default"
-            type="button"
-            className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-gray focus:outline-none focus:ring-2 focus:gray :text-gray-400"
-            aria-controls="navbar-default"
-            aria-expanded="false"
-          >
-            <span className="sr-only">Open main menu</span>
+          <IconButton
+          variant="text"
+          className="h-6 w-6 text-inherit pr-10 pb-5 text-white bg-transparent lg:hidden"
+          ripple={false}
+          onClick={() => setOpenNav(!openNav)}
+        >
+          {openNav ? (
             <svg
-              className="w-6 h-6"
-              aria-hidden="true"
-              fill="currentColor"
-              viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-6 w-6"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
             >
               <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
             </svg>
-          </button>
-          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </IconButton>
+      </div>
+      <MobileNav open={openNav}>
+        <div className="container mx-auto">
+          <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span> <Link
+                  to="/"
+                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
+                  aria-current="page"
+                >
+                  Home
+                </Link></span>
+            </Button>
+              <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span> <Link
+                  to="/contact"
+                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
+                  aria-current="page"
+                >
+                  Contact
+                </Link></span>
+            </Button>
+              <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span> <Link
+                  to="/faq"
+                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
+                  aria-current="page"
+                >
+                 FAQs
+                </Link></span>
+            </Button>
+              <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span> <Link
+                  to="/store"
+                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
+                  aria-current="page"
+                >
+                  Store
+                </Link></span>
+            </Button>
+                <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span> <Link
+                  to="/cart"
+                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
+                  aria-current="page"
+                >
+                  Cart ({totalCartQuantity})
+                </Link></span>
+            </Button>
+        </div>
+      </MobileNav>
+          <div className="hidden lg:w-full lg:flex lg:justify-end lg:-mt-14 lg:pb-2 lg:pr-14" id="navbar-default">
             <ul className="flex flex-col bg-slate-800 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:text-sm md:font-medium md:border-0">
               <li>
                 <Link
@@ -114,10 +195,9 @@ const Navbar = () => {
               </Link>
             </ul>
           </div>
-        </div>
       </nav>
     </>
   )
 }
 
-export default Navbar
+export default Nav

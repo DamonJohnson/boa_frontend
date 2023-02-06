@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import {StoreContextProvider} from "./context/StoreContext"
 
-import Navbar from "./components/Navbar"
+import Nav from "./components/Nav"
 import Footer from "./components/Footer"
 import ShoppingCart from "./components/ShoppingCart"
 
@@ -19,7 +19,7 @@ function App() {
   return (
     <StoreContextProvider>
       <BrowserRouter>
-        <Navbar />
+        <Nav />
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/contact" element={<Contact />} />

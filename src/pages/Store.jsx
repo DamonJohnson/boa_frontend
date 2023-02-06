@@ -141,7 +141,7 @@ const Store = () => {
                                             </svg>
                                         </span>
                                     </div>
-                                    <div className="flex ml-6">
+                                    <div className="flex ml-44">
                                         <span className="mr-3 mt-1">Quantity</span>
                                         <input
                                             className="text-center border rounded-md border-pale-grey py-1 px-3"
