@@ -18,7 +18,6 @@ const Footer = () => {
                         <ul>
                             <li className="font-bold pb-2">Customer Care</li>
                             <li className="hover:text-primary"><Link to="/terms-of-service">Terms of Service</Link></li>
-                            <li className="hover:text-primary">Returns Policy</li>
                             <li className="hover:text-primary"><Link to="/privacy-policy">Privacy Policy</Link></li>
                         </ul>
                 </div>

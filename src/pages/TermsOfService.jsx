@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const TermsOfService = () => {
     return (
@@ -41,7 +40,7 @@ const TermsOfService = () => {
             <p>We reserve the right to change these Terms of Service at any time. Your continued use of the platform following any changes indicates your acceptance of the new Terms of Service.</p>
             
             <h4 className="mt-4 text-lg font-bold">Contact Us</h4>
-            <p>If you have any questions regarding these Terms of Service, please contact us through our <Link to="contact" className="underline hover:text-primary">contact form.</Link>
+            <p>If you have any questions regarding these Terms of Service, please contact us through our <a href="contact" className="underline hover:text-primary">contact form.</a>
              </p>
           </body>
     </div>

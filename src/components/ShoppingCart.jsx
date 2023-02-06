@@ -15,19 +15,7 @@ const ShoppingCart = () => {
     productTotals.reduce((a, b) => a + b, 0) / 100
   )
     
-    // const shippingPrice = () => {
-    //     console.log('shipping price called')
-    //     if (totalCartQuantity = false) {
-    //         return
-    //     }
-    //     if (totalCartQuantity < 2) {
-    //       return 30
-    //     } if (totalCartQuantity > 1 && totalCartQuantity < 6) {
-    //         return 65
-    //     } if (totalCartQuantity > 5) {
-    //         return totalCartQuantity * 15
-    //     }
-    //   }
+
   
   const cartItems = [
     { id: 1, quantity: cartQuantity['001']},
@@ -60,8 +48,8 @@ const ShoppingCart = () => {
     <div>
       <body className=" text-secondary rounded-lg">
         <div className="container mx-auto mt-10">
-          <div className="flex shadow-md my-10">
-            <div className="w-3/4 bg-white px-10 py-10">
+  <div className="flex flex-col md:flex-row shadow-md my-10">
+    <div className="w-full md:w-3/4 bg-white px-10 py-10">
               <div className="flex justify-between border-b border-grey pb-8">
                 <h1 className="font-semibold text-2xl">Shopping Cart</h1>
                               <h2 className="font-semibold text-2xl">{totalCartQuantity} Items</h2>
@@ -105,7 +93,7 @@ const ShoppingCart = () => {
               </Link>
             </div>
 
-            <div id="summary" className="w-1/4 px-8 bg-off-white py-10">
+    <div id="summary" className="w-full md:w-1/4 px-8 bg-off-white py-10 mt-10 md:mt-0 sm:mt-0 sm:pt-0 md:pt-0">
               <h1 className="font-semibold text-2xl border-b border-grey pb-8">
                 Order Summary
               </h1>
@@ -113,14 +101,7 @@ const ShoppingCart = () => {
                 <span className="font-semibold text-sm uppercase">Items {totalCartQuantity}</span>
                               <span className="font-semibold text-sm">{totalCartPrice}</span>
               </div>
-              {/* <div>
-                <label className="font-medium inline-block mb-3 text-sm uppercase">
-                  Shipping
-                </label>
-                <select className="block p-2 text-secondary w-full text-sm">
-                    <option>Standard shipping {shippingPrice}</option>
-                </select>
-              </div> */}
+
               <div className="py-10">
                 <label
                   for="promo"

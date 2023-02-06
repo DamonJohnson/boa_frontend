@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 const PrivacyPolicy = () => {
   return (
@@ -26,7 +25,7 @@ const PrivacyPolicy = () => {
             <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will notify you of any changes by posting the new Privacy Policy on our website.</p>
             
             <h4 className="mt-4 text-lg font-bold">Contact Us</h4>
-            <p>If you have any questions about this Privacy Policy or the personal information we collect on our website, please contact us via our  <Link to="contact" className="underline hover:text-primary">contact form.</Link>{' '}
+            <p>If you have any questions about this Privacy Policy or the personal information we collect on our website, please contact us via our  <a href="contact" className="underline hover:text-primary">contact form.</a>{' '}
              By using our website, you consent to the collection, use, and disclosure of your personal information as described in this Privacy Policy.
             </p>
           </body>
