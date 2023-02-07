@@ -2,6 +2,7 @@ import React from 'react'
 import DesktopHero from "../components/DesktopHero"
 import MobileHero from "../components/MobileHero"
 import Benefits from "../components/Benefits"
+import Store from "../pages/Store"
 
 const Landing = () => {
     return (
@@ -9,6 +10,7 @@ const Landing = () => {
         < DesktopHero />
         < MobileHero />
         < Benefits />
+        < Store />
      </div>
   )
 }
