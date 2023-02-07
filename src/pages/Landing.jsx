@@ -1,11 +1,13 @@
 import React from 'react'
-import Hero from "../components/Hero"
+import DesktopHero from "../components/DesktopHero"
+import MobileHero from "../components/MobileHero"
 import Benefits from "../components/Benefits"
 
 const Landing = () => {
     return (
-    <div>
-        < Hero />
+    <div classname="overflow-hidden">
+        < DesktopHero />
+        < MobileHero />
         < Benefits />
      </div>
   )

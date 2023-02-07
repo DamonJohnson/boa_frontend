@@ -34,18 +34,18 @@ const Nav = () => {
             "linear-gradient(90deg, rgba(38,36,61,1) 3%, rgba(26,48,62,1) 55%, rgba(9,86,145,1) 90%, rgba(0,28,31,1) 100%, rgba(78,117,72,1) 100%)",
         }}
       >
-        <div className="container flex flex-wrap justify-between items-center mx-auto z-10">
+        <div className="container flex flex-wrap sm:justify-between items-center md:mx-auto  l z-10">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/damonjohnson/image/upload/v1671437857/Boa/Boa_Wraps_rsknxp.svg"
-              className="mr-0 xsm:h-10 md:h-16 l:h-20"
+              className="mr-0 xs:h-14 md:h-16 l:h-20"
               alt="Boa Wraps Logo"
             />
           </Link>
 
           <IconButton
           variant="text"
-          className="h-6 w-6 text-inherit pr-10 pb-5 text-white bg-transparent lg:hidden"
+          className="h-6 w-6 text-inherit sm:pr-10 pb-5 xs:right-8 xs:absolute text-white bg-transparent lg:hidden"
           ripple={false}
           onClick={() => setOpenNav(!openNav)}
         >

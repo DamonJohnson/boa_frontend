@@ -6,7 +6,7 @@ const Footer = () => {
 
     return (
         <div className="pt-28">
-        <footer className="bg-white py-5 w-screen mx-auto sm:px-20 md:px-20">
+        <footer className="bg-white py-5 w-screen mx-auto xs:px-10 sm:px-20 md:px-20">
             <div className="max-w-lg sm:mx-auto sm:text-center">
                 <img src="https://res.cloudinary.com/damonjohnson/image/upload/v1671517449/Boa/Boa_Wraps_1_yiq0cj.svg" className="w-64 sm:mx-auto" />
                 <p className="leading-relaxed mt-2 text-secondary">
