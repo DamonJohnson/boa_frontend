@@ -101,15 +101,7 @@ const Nav = () => {
                   Contact
                 </Link></span>
             </Button>
-              <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
-            <span> <Link
-                  to="/faq"
-                  className="block mt-3 pl-3 text-white rounded md:p-0 hover:text-primary"
-                  aria-current="page"
-                >
-                 FAQs
-                </Link></span>
-            </Button>
+
               <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
             <span> <Link
                   to="/store"
@@ -147,14 +139,6 @@ const Nav = () => {
                   className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0"
                 >
                   Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/faq"
-                  className="block mt-3 pr-4 pl-3 text-white rounded hover:text-primary  md:p-0"
-                >
-                  FAQs
                 </Link>
               </li>
               <li>

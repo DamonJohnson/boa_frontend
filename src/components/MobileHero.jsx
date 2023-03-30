@@ -20,7 +20,7 @@ const MobileHero = () => {
                 </video>
                 <div className="z-30 mb-24 pb-24">
                     <div className= "py-6 ml-auto mr-auto">
-                        <div className="w-3/4 pl-4 pr-4">
+                        <div className="w-3/4 pl-4">
                             <h1 className="text-white font-semibold text-xl">
                                 Reusable Pallet Wraps
                             </h1>

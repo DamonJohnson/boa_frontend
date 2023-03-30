@@ -7,7 +7,6 @@ import ShoppingCart from "./components/ShoppingCart"
 
 import Landing from "./pages/Landing"
 import Contact from "./pages/Contact"
-import Faq from "./pages/Faq"
 import Store from "./pages/Store"
 import Quote from "./pages/Quote"
 import Success from "./pages/Success"
@@ -23,7 +22,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/faq" element={<Faq />} />
           <Route path="/store" element={<Store />} />
           <Route path="/quote" element={<Quote />} />
           <Route path="/cart" element={<ShoppingCart />} />
