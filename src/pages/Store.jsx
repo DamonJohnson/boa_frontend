@@ -19,7 +19,7 @@ const Store = () => {
     return (
         <>
             <section className="text-secondary body-font overflow-hidden">
-                <div className="container px-5 py-24 mx-auto">
+                <div className="xs:px-8 sm:container sm:px-5 py-24 sm:mx-auto">
                     <div className="lg:w-4/5 mx-auto flex flex-wrap">
                         <div className="lg:w-1/2 w-full rounded-md border border-pale-grey">
                             <ImageCarousel
@@ -28,13 +28,13 @@ const Store = () => {
                             />
                         </div>
 
-                        <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+                        <div className="xs:w-full lg:w-1/2 lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                             <h2 className="text-sm title-font tracking-widest">BOA WRAPS</h2>
-                            <h1 className="text-3xl title-font font-medium mb-1">
+                            <h1 className="xs:text-2xl text-3xl title-font font-medium mb-1">
                                 Reusable Pallet Wrap
                             </h1>
 
-                            <div className="relative overflow-x-auto rounded-md mt-6 border border-pale-grey">
+                            <div className="relative xs:rounded-lg rounded-md mt-6 md:border border-pale-grey">
                                 <table className="w-full text-sm text-left">
                                     <thead className="text-xs uppercase bg-pale-grey">
                                         <tr className="rounded-sm">
@@ -141,7 +141,7 @@ const Store = () => {
                                             </svg>
                                         </span>
                                     </div>
-                                    <div className="flex ml-44">
+                                    <div className="flex pl-12">
                                         <span className="mr-3 mt-1">Quantity</span>
                                         <input
                                             className="text-center border rounded-md border-pale-grey py-1 px-3"
