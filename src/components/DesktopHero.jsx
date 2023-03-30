@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "react-router-dom"
+
 
 const DesktopHero = () => {
   return (
@@ -26,11 +28,11 @@ const DesktopHero = () => {
                 A sustainable alternative to single use shrink wrap film
               </h3>
               <div className="md:bottom-2 pt-8">
-                <a href="/store">
+                <Link to="/store"  aria-current="page">
                   <button className="bg-primary font-semibold w-2/5 text-white py-3 md:px-8 duration-100 rounded-l-lg rounded-tr-lg hover:ring-4">
                     View Store
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
