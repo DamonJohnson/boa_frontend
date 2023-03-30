@@ -4,7 +4,6 @@ import {StoreContextProvider} from "./context/StoreContext"
 import Nav from "./components/Nav"
 import Footer from "./components/Footer"
 import ShoppingCart from "./components/ShoppingCart"
-
 import Landing from "./pages/Landing"
 import Contact from "./pages/Contact"
 import Store from "./pages/Store"
