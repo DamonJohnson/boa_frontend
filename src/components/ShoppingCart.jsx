@@ -93,7 +93,7 @@ const ShoppingCart = () => {
               </Link>
             </div>
 
-    <div id="summary" className="w-full md:w-1/4 px-8 bg-off-white pb-10 mt-10 sm:mt-0 sm:pt-0">
+    <div id="summary" className="w-full md:w-1/4 px-8 bg-ofxf-white pb-10 mt-10 sm:mt-0 sm:pt-0">
               <h1 className="font-semibold text-2xl border-b border-grey pb-8 sm:pt-10">
                 Order Summary
               </h1>
