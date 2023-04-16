@@ -171,9 +171,7 @@ const Store = () => {
                                 </button>
                             </div><div className="pt-6 text-sm text-right">
                                 <Link to="/Quote" className="underline hover:font-semibold">Custom Order?</Link>
-                                </div>
-
-
+                            </div>
                         </div>
                     </div>
                 </div>

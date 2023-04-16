@@ -5,6 +5,7 @@ import { StoreContext } from "../context/StoreContext"
 import CartItem from "./CartItem"
 import { formatCurrency } from "../utilities/formatCurrency"
 
+
 const ShoppingCart = () => {
   const { cartQuantity, totalCartQuantity } = useContext(StoreContext)
   const productTotals = products.map(
@@ -81,7 +82,7 @@ const ShoppingCart = () => {
 
               <Link
                 to="/store"
-                className="flex font-semibold text-indigo-600 text-sm mt-10"
+                className="flex font-semibold text-indigo-600 text-sm mt-10 hover:text-primary"
               >
                 <svg
                   className="fill-secondary mr-2 w-4"

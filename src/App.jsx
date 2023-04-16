@@ -9,7 +9,7 @@ import Contact from "./pages/Contact"
 import Store from "./pages/Store"
 import Quote from "./pages/Quote"
 import Success from "./pages/Success"
-import Cancel from "./pages/Cancel"
+import Fail from "./pages/Fail"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsOfService from "./pages/TermsOfService"
 
@@ -25,7 +25,7 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/success" element={<Success />} />
-          <Route path="/cancel" element={<Cancel />} />
+          <Route path="/fail" element={<Fail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
