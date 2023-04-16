@@ -12,6 +12,7 @@ import Success from "./pages/Success"
 import Fail from "./pages/Fail"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsOfService from "./pages/TermsOfService"
+import CheckoutUnavailable from "./pages/CheckoutUnavailable"
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/fail" element={<Fail />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="checkout-unavailable" element={<CheckoutUnavailable />} />
         </Routes>
         <Footer />
       </BrowserRouter>

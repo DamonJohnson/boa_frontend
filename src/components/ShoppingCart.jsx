@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { products } from "../data/Products"
 import { StoreContext } from "../context/StoreContext"
 import CartItem from "./CartItem"
@@ -16,33 +16,34 @@ const ShoppingCart = () => {
     productTotals.reduce((a, b) => a + b, 0) / 100
   )
     
-
-  
   const cartItems = [
     { id: 1, quantity: cartQuantity['001']},
     { id: 2, quantity: cartQuantity['002']}
   ]
+
+  const navigate = useNavigate()
   
     
   function checkout() {
-    console.log(cartQuantity[0])
-    fetch("http://localhost:3001/create-checkout-session", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-      body: JSON.stringify({ cartItems }),
-  })
-    .then(res => {
-      if (res.ok) return res.json()
-      return res.json().then(json => Promise.reject(json))
-    })
-    .then(({ url }) => {
-      window.location = url
-    })
-    .catch(e => {
-      console.error(e.error)
-    })
+    navigate("/checkout-unavailable")
+  //   console.log(cartQuantity[0])
+  //   fetch("http://localhost:3001/create-checkout-session", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //     body: JSON.stringify({ cartItems }),
+  // })
+  //   .then(res => {
+  //     if (res.ok) return res.json()
+  //     return res.json().then(json => Promise.reject(json))
+  //   })
+  //   .then(({ url }) => {
+  //     window.location = url
+  //   })
+  //   .catch(e => {
+  //     console.error(e.error)
+  //   })
     }
 
   return (

@@ -90,7 +90,8 @@ const Nav = () => {
                   aria-current="page"
                 >
                   Home
-                </Link></span>
+              </Link></span>
+              
             </Button>
               <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
             <span> <Link
@@ -100,6 +101,9 @@ const Nav = () => {
                 >
                   Contact
                 </Link></span>
+            </Button>
+             <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
+            <span>ROI</span>
             </Button>
 
               <Button variant="gradient" size="sm" fullWidth className="mb-2" onClick={() => setOpenNav(!openNav)}>
@@ -140,6 +144,13 @@ const Nav = () => {
                 >
                   Contact
                 </Link>
+            </li>
+            <li>
+                <button
+                  className="block mt-3 pr-4 pl-3 text-white rounded  hover:text-primary md:p-0"
+                >
+                  ROI Calculator
+                </button>
               </li>
               <li>
                 <Link
