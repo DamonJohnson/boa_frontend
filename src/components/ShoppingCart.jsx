@@ -6,6 +6,7 @@ import CartItem from "./CartItem"
 import { formatCurrency } from "../utilities/formatCurrency"
 
 
+
 const ShoppingCart = () => {
   const { cartQuantity, totalCartQuantity } = useContext(StoreContext)
   const productTotals = products.map(
@@ -27,7 +28,7 @@ const ShoppingCart = () => {
   function checkout() {
     navigate("/checkout-unavailable")
   //   console.log(cartQuantity[0])
-  //   fetch("http://localhost:3001/create-checkout-session", {
+  //   fetch(process.env.REACT_APP_DEVELOPMENT_API_URL + "create-checkout-session", {
   //   method: "POST",
   //   headers: {
   //     "Content-Type": "application/json",

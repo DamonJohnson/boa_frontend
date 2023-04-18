@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react'
   import("tailwindcss").Config
 }
 
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()]
