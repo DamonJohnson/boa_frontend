@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 const Contact = () => {
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
+  const [company, setCompany] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [subject, setSubject] = useState("")
@@ -12,6 +13,7 @@ const Contact = () => {
   const formData = {
     firstName: firstName,
     lastName: lastName,
+    company: company,
     email: email,
     phone: phone,
     subject: subject,
@@ -80,6 +82,21 @@ const Contact = () => {
                 placeholder="Doe"
                 required
                 onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="company"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Your Company
+              </label>
+              <input
+                id="company"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                placeholder="Acme Corporation"
+                required
+                onChange={(e) => setCompany(e.target.value)}
               />
             </div>
             <div>
