@@ -89,7 +89,7 @@ const Contact = () => {
                 for="company"
                 className="block mb-2 text-sm font-medium text-secondary"
               >
-                Your Company
+                Your company
               </label>
               <input
                 id="company"
