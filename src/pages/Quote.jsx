@@ -1,17 +1,60 @@
-import React from 'react'
+import React from "react"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 const Quote = () => {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [company, setCompany] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [products, setProducts] = useState("")
+  const [requirements, setRequirements] = useState("")
+  const formData = {
+    firstName: firstName,
+    lastName: lastName,
+    company: company,
+    email: email,
+    phone: phone,
+    products: products,
+    requirements: requirements,
+  }
+
+  const navigate = useNavigate()
+
+ const handleSubmit = async (event) => {
+  try {
+    event.preventDefault();
+    await submitContactForm(formData);
+    navigate("/requirements-sent");
+  } catch (error) {
+    console.error("Form submission error:", error);
+    navigate("/contact-unavailable");
+  }
+};
+
+const submitContactForm = async (formData) => {
+  const response = await fetch("http://localhost:3001/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ formData }),
+  });
+  if (!response.ok) {
+    throw new Error(`Failed to submit contact form: ${response.statusText}`);
+  }
+};
+
   return (
-     <>
+    <>
       <section>
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-sm">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-secondary">
             Request a Quote
           </h2>
           <p className="mb-2 lg:mb-16 text-center text-secondary">
-            Submit the form below for an obligation free quote
+           Submit the form below for an obligation free quote.
           </p>
-          <form action="#" className="space-y-8">
+          <form  className="space-y-8">
             <div>
               <label
                 for="firstname"
@@ -22,9 +65,10 @@ const Quote = () => {
               <input
                 type="firstname"
                 id="firstname"
-                className="shadow-sm mb-6 bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm mb-6 bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="John"
                 required
+                onChange={(e) => setFirstName(e.target.value)}
               />
             </div>
             <div>
@@ -37,9 +81,25 @@ const Quote = () => {
               <input
                 type="lastname"
                 id="lastname"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="Doe"
                 required
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="company"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Your company
+              </label>
+              <input
+                id="company"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                placeholder="Acme Corporation"
+                required
+                onChange={(e) => setCompany(e.target.value)}
               />
             </div>
             <div>
@@ -52,63 +112,55 @@ const Quote = () => {
               <input
                 type="email"
                 id="email"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
                 placeholder="name@acme.com"
                 required
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
               <label
-                for="mobile"
+                for="phone"
                 className="block mb-2 text-sm font-medium text-secondary"
               >
-                Your mobile
+                Your phone number
               </label>
               <input
-                type="mobile"
-                id="mobile"
-                className="shadow-sm bg-pale-grey border border-secondary text-secondary text-sm rounded-lg focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
+                type="phone"
+                id="phone"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
                 placeholder="0412 345 678"
                 required
-              />
-            </div>
-            <div>
-              <label
-                for="product"
-                className="block mb-2 text-sm text-secondary font-medium"
-              >
-                Product
-              </label>
-              <input
-                type="text"
-                id="subject"
-                className="block p-3 w-full text-sm text-secondary bg-pale-grey rounded-lg border border-secondary shadow-sm focus:ring-secondary focus:border-primary-500"
-                placeholder="Which product are you interested in?"
-                required
+                onChange={(e) => setPhone(e.target.value)}
               />
             </div>
             <div className="sm:col-span-2">
               <label
-                for="message"
+                for="requirements"
                 className="block mb-2 text-sm font-medium text-secondary "
               >
-                Details
+                Your Requirements
               </label>
               <textarea
-                id="details"
+                id="requirements"
                 rows="6"
-                className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-lg shadow-sm border border-secondary focus:ring-secondary focus:border-primary-500"
-                placeholder="Describe the details of your order..."
+                className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-md shadow-sm border  border-grey focus:ring-secondary focus:border-primary-500"
+                placeholder="Decribe your requirements"
+                onChange={(e) => setRequirements(e.target.value)}
               ></textarea>
             </div>
             <div className="flex flex-col items-center">
               <button
+                onClick={(e) => handleSubmit(e)}
                 type="submit"
-                className="py-3 px-10 text-sm font-medium text-center text-white rounded-lg  bg-secondary sm:w-fit  hover:ring-1"
+                className="py-3 px-10 text-sm font-medium text-center text-white rounded-md  bg-secondary sm:w-fit hover:ring-2"
               >
-                Submit
+                Send requirements
               </button>
-              <p className="text-secondary text-sm pt-10">You will not be subscribed to a recurring mail service by submitting this form</p>
+              <p className="text-secondary text-sm pt-10">
+                You will not be subscribed to a recurring mail service by
+                submitting this form
+              </p>
             </div>
           </form>
         </div>

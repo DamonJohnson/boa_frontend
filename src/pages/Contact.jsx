@@ -22,23 +22,27 @@ const Contact = () => {
 
   const navigate = useNavigate()
 
-  const handleSubmit = async (event) => {
-    event.preventDefault()
-    navigate("/message-sent")
-    await submitContactForm(formData)
+ const handleSubmit = async (event) => {
+  try {
+    event.preventDefault();
+    await submitContactForm(formData);
+    navigate("/message-sent");
+  } catch (error) {
+    console.error("Form submission error:", error);
+    navigate("/contact-unavailable");
   }
+};
 
-  const submitContactForm = async (formData) => {
-    try {
-      const response = await fetch("http://localhost:3001/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
-    } catch (error) {
-      console.error("Form submission error:", error)
-    }
+const submitContactForm = async (formData) => {
+  const response = await fetch("http://localhost:3001/contact", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ formData }),
+  });
+  if (!response.ok) {
+    throw new Error(`Failed to submit contact form: ${response.statusText}`);
   }
+};
 
   return (
     <>

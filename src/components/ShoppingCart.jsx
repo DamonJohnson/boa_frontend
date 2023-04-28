@@ -26,25 +26,24 @@ const ShoppingCart = () => {
   
     
   function checkout() {
-    navigate("/checkout-unavailable")
-  //   console.log(cartQuantity[0])
-  //   fetch(process.env.REACT_APP_DEVELOPMENT_API_URL + "create-checkout-session", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //     body: JSON.stringify({ cartItems }),
-  // })
-  //   .then(res => {
-  //     if (res.ok) return res.json()
-  //     return res.json().then(json => Promise.reject(json))
-  //   })
-  //   .then(({ url }) => {
-  //     window.location = url
-  //   })
-  //   .catch(e => {
-  //     console.error(e.error)
-  //   })
+    // navigate("/checkout-unavailable")
+   fetch("http://localhost:3001/create-checkout-session", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+      body: JSON.stringify({ cartItems }),
+  })
+    .then(res => {
+      if (res.ok) return res.json()
+      return res.json().then(json => Promise.reject(json))
+    })
+    .then(({ url }) => {
+      window.location = url
+    })
+    .catch(e => {
+      console.error(e.error)
+    })
     }
 
   return (

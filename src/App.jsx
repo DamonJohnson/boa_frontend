@@ -13,6 +13,7 @@ import Fail from "./pages/Fail"
 import PrivacyPolicy from "./pages/PrivacyPolicy"
 import TermsOfService from "./pages/TermsOfService"
 import CheckoutUnavailable from "./pages/CheckoutUnavailable"
+import ContactUnavailable from "./pages/ContactUnavailable"
 import MessageSent from "./pages/MessageSent"
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/checkout-unavailable" element={<CheckoutUnavailable />} />
           <Route path="/message-sent" element={<MessageSent />} />
+          <Route path="/contact-unavailable" element={<ContactUnavailable />} />
         </Routes>
         <Footer />
       </BrowserRouter>
