@@ -25,22 +25,22 @@ const Quote = () => {
  const handleSubmit = async (event) => {
   try {
     event.preventDefault();
-    await submitContactForm(formData);
-    navigate("/requirements-sent");
+    await submitQuoteForm(formData);
+    navigate("/message-sent");
   } catch (error) {
     console.error("Form submission error:", error);
     navigate("/contact-unavailable");
   }
 };
 
-const submitContactForm = async (formData) => {
-  const response = await fetch("http://localhost:3001/contact", {
+const submitQuoteForm = async (formData) => {
+  const response = await fetch("http://localhost:3001/quote", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ formData }),
   });
   if (!response.ok) {
-    throw new Error(`Failed to submit contact form: ${response.statusText}`);
+    throw new Error(`Failed to submit quote form: ${response.statusText}`);
   }
 };
 
