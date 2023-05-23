@@ -233,7 +233,7 @@ const ShoppingCart = () => {
                   <span>Total cost</span>
                                   <span>{totalCartPrice}</span>
                               </div>              
-                <button className="bg-primary font-semibold py-3 text-sm text-white uppercase w-full rounded-md hover:ring-2" onClick={() => checkout()}>Checkout</button>   
+                <button className="bg-primary font-semibold py-3 text-sm text-white uppercase w-full rounded-md hover:ring-2" onClick={() => checkout()}>Submit order</button>   
               </div>
             </div>
           </div>
