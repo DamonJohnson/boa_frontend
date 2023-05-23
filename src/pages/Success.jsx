@@ -7,8 +7,7 @@ const Success = () => {
       <body>
         <p className="pt-4 text-center px-8">
           We have received your request and are
-          processing it as quickly as possible. You will receive a confirmation
-          email with your order details shortly.
+          processing it as quickly as possible. You will receive an email from our team shortly.
           </p>
         <p className="pt-2 text-center px-8">
           We appreciate your business and thank you for choosing Boa Wraps!
