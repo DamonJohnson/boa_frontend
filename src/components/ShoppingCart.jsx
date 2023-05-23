@@ -1,5 +1,5 @@
-import { useContext } from "react"
-import { Link, useNavigate, useState } from "react-router-dom"
+import { useContext, useState } from "react"
+import { Link, useNavigate } from "react-router-dom"
 import { products } from "../data/Products"
 import { StoreContext } from "../context/StoreContext"
 import CartItem from "./CartItem"
