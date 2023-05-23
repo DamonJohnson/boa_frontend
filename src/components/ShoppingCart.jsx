@@ -48,14 +48,9 @@ const ShoppingCart = () => {
     headers: {
       "Content-Type": "application/json",
     },
-    //  body: {
-    //     cartItems: JSON.stringify({ cartItems }),
-    //     contactDetails: JSON.stringify({ contactDetails })
-    //  }
         body: JSON.stringify({ cartItems, contactDetails }),
-
   })
-    .then(() => {
+      .then(() => {
     navigate("/success");
     })
      .catch((e) => {
