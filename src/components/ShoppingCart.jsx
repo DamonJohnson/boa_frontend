@@ -43,20 +43,22 @@ const ShoppingCart = () => {
 
 
   const checkout = async () => {
-   const response = await fetch("http://localhost:3001/checkout", {
+    await fetch("http://localhost:3001/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-     body: {
-        cartItems: JSON.stringify({ cartItems }),
-        contactDetails: JSON.stringify({ contactDetails })
-     }
+    //  body: {
+    //     cartItems: JSON.stringify({ cartItems }),
+    //     contactDetails: JSON.stringify({ contactDetails })
+    //  }
+        body: JSON.stringify({ cartItems, contactDetails }),
+
   })
     .then(() => {
     navigate("/success");
     })
-    .catch((e) => {
+     .catch((e) => {
     navigate("/fail");
     })
     }
