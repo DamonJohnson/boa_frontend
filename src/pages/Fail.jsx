@@ -10,7 +10,7 @@ const Fail = () => {
       </h2>
       <body>
         <p className="pt-4 text-center px-8">
-          Please check your payment information and try again, or <Link to="/contact"  className="underline hover:text-primary " aria-current="page">contact us</Link> if
+          Please <Link to="/contact"  className="underline hover:text-primary " aria-current="page">contact us</Link> if
           you continue to experience issues.
         </p>
       </body>
