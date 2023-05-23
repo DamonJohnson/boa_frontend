@@ -22,16 +22,16 @@ const Quote = () => {
 
   const navigate = useNavigate()
 
- const handleSubmit = async (event) => {
-  try {
-    event.preventDefault();
-    await submitQuoteForm(formData);
-    navigate("/message-sent");
-  } catch (error) {
-    console.error("Form submission error:", error);
-    navigate("/contact-unavailable");
-  }
-};
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      await submitQuoteForm(formData);
+      navigate("/message-sent");
+    } catch (error) {
+      console.error("Form submission error:", error);
+      navigate("/contact-unavailable");
+    }
+  };
 
 const submitQuoteForm = async (formData) => {
   const response = await fetch("http://localhost:3001/quote", {
@@ -66,7 +66,6 @@ const submitQuoteForm = async (formData) => {
                 type="firstname"
                 id="firstname"
                 className="shadow-sm mb-6 bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
-                placeholder="John"
                 required
                 onChange={(e) => setFirstName(e.target.value)}
               />
@@ -82,7 +81,6 @@ const submitQuoteForm = async (formData) => {
                 type="lastname"
                 id="lastname"
                 className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
-                placeholder="Doe"
                 required
                 onChange={(e) => setLastName(e.target.value)}
               />
@@ -97,7 +95,6 @@ const submitQuoteForm = async (formData) => {
               <input
                 id="company"
                 className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
-                placeholder="Acme Corporation"
                 required
                 onChange={(e) => setCompany(e.target.value)}
               />
@@ -113,7 +110,6 @@ const submitQuoteForm = async (formData) => {
                 type="email"
                 id="email"
                 className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
-                placeholder="name@acme.com"
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -129,7 +125,6 @@ const submitQuoteForm = async (formData) => {
                 type="phone"
                 id="phone"
                 className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
-                placeholder="0412 345 678"
                 required
                 onChange={(e) => setPhone(e.target.value)}
               />
@@ -145,7 +140,6 @@ const submitQuoteForm = async (formData) => {
                 id="requirements"
                 rows="6"
                 className="block p-2.5 w-full text-sm text-secondary bg-pale-grey rounded-md shadow-sm border  border-grey focus:ring-secondary focus:border-primary-500"
-                placeholder="Decribe your requirements"
                 onChange={(e) => setRequirements(e.target.value)}
               ></textarea>
             </div>

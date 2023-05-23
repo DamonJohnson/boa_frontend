@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useState } from "react-router-dom"
 import { products } from "../data/Products"
 import { StoreContext } from "../context/StoreContext"
 import CartItem from "./CartItem"
@@ -22,27 +22,42 @@ const ShoppingCart = () => {
     { id: 2, quantity: cartQuantity['002']}
   ]
 
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [company, setCompany] = useState("")
+  const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
+  const [address, setAddress] = useState("")
+  const [postcode, setPostcode] = useState("")
+  const contactDetails = {
+    firstName: firstName,
+    lastName: lastName,
+    company: company,
+    email: email,
+    phone: phone,
+    address: address,
+    postcode: postcode,
+  }
+
   const navigate = useNavigate()
-  
-    
+
+
   function checkout() {
-    // navigate("/checkout-unavailable")
-   fetch("http://localhost:3001/create-checkout-session", {
+   fetch("http://localhost:3001/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-      body: JSON.stringify({ cartItems }),
+     body: {
+        cartItems: JSON.stringify({ cartItems }),
+        contactDetails: JSON.stringify({ contactDetails })
+     }
   })
-    .then(res => {
-      if (res.ok) return res.json()
-      return res.json().then(json => Promise.reject(json))
-    })
-    .then(({ url }) => {
-      window.location = url
+    .then(() => {
+    navigate("/success");
     })
     .catch(e => {
-      console.error(e.error)
+    navigate("/fail");
     })
     }
 
@@ -99,6 +114,115 @@ const ShoppingCart = () => {
               <h1 className="font-semibold text-2xl border-b border-grey pb-8 sm:pt-10">
                 Order Summary
               </h1>
+               <div className="flex mt-10 mb-5 w-full">
+                 <form action="#" className="space-y-5 w-full">
+            <div>
+              <label
+                for="firstname"
+                className="block mb-2 text-sm font-medium text-secondary w-full"
+              >
+                First name
+              </label>
+              <input
+                type="firstname"
+                id="firstname"
+                className="shadow-sm mb-6 bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                required
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="lastname"
+                className="block mb-2 text-sm font-medium text-secondary w-full"
+              >
+                Last name
+              </label>
+              <input
+                type="lastname"
+                id="lastname"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                required
+                onChange={(e) => setLastName(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="company"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Company name
+              </label>
+              <input
+                id="company"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                required
+                onChange={(e) => setCompany(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5 "
+                required
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <label
+                for="phone"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Phone number
+              </label>
+              <input
+                type="phone"
+                id="phone"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
+                required
+                onChange={(e) => setPhone(e.target.value)}
+              />
+                  </div>
+                  <div>
+              <label
+                for="phone"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Address
+              </label>
+              <input
+                type="address"
+                id="address"
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
+                required
+                onChange={(e) => setAddress(e.target.value)}
+              />
+                  </div>
+                  <div>
+              <label
+                for="phone"
+                className="block mb-2 text-sm font-medium text-secondary"
+              >
+                Postcode
+              </label>
+              <input
+                type="number"
+                id="postcode"
+                maxLength='4'
+                className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
+                required
+                onChange={(e) => setPostcode(e.target.value)}
+              />
+            </div>
+          </form>
+              </div>
               <div className="flex justify-between mt-10 mb-5">
                 <span className="font-semibold text-sm uppercase">{totalCartQuantity} Items</span>
                               <span className="font-semibold text-sm">{totalCartPrice}</span>
