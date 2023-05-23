@@ -42,8 +42,8 @@ const ShoppingCart = () => {
   const navigate = useNavigate()
 
 
-  function checkout() {
-   fetch("http://localhost:3001/checkout", {
+  const checkout = async () => {
+   const response = await fetch("http://localhost:3001/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -56,7 +56,7 @@ const ShoppingCart = () => {
     .then(() => {
     navigate("/success");
     })
-    .catch(e => {
+    .catch((e) => {
     navigate("/fail");
     })
     }
@@ -213,7 +213,7 @@ const ShoppingCart = () => {
                 Postcode
               </label>
               <input
-                type="number"
+                type="postcode"
                 id="postcode"
                 maxLength='4'
                 className="shadow-sm bg-pale-grey border  border-grey text-secondary text-sm rounded-md focus:ring-secondary focus:border-primary-500 block w-full p-2.5"
