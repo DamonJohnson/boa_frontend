@@ -8,7 +8,8 @@ import { formatCurrency } from "../utilities/formatCurrency"
 
 
 const ShoppingCart = () => {
-  const { cartQuantity, totalCartQuantity } = useContext(StoreContext)
+  const { cartQuantity, totalCartQuantity, removeAllFromCart } = useContext(StoreContext)
+  
   const productTotals = products.map(
     (product) => product.price * cartQuantity[product.id]
   )
@@ -51,7 +52,9 @@ const ShoppingCart = () => {
         body: JSON.stringify({ cartItems, contactDetails }),
   })
       .then(() => {
-    navigate("/success");
+        removeAllFromCart('001')
+        removeAllFromCart('002')
+        navigate("/success");
     })
      .catch((e) => {
     navigate("/fail");
