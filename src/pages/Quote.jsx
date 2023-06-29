@@ -34,7 +34,7 @@ const Quote = () => {
   };
 
 const submitQuoteForm = async (formData) => {
-  const response = await fetch("http://localhost:3001/quote", {
+  const response = await fetch(process.env.PROD_API_URL + "/quote", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ formData }),

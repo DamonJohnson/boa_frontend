@@ -44,7 +44,7 @@ const ShoppingCart = () => {
 
 
   const checkout = async () => {
-    await fetch("http://localhost:3001/checkout", {
+    await fetch(process.env.BACKENDAPIURL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
