@@ -34,7 +34,7 @@ const Contact = () => {
 };
 
 const submitContactForm = async (formData) => {
-  const response = await fetch("https://boa-backend.onrender.com:10000" + "/contact", {
+  const response = await fetch("https://boa-backend-us.onrender.com" + "/contact", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ formData }),

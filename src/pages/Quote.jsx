@@ -34,7 +34,7 @@ const Quote = () => {
   };
 
 const submitQuoteForm = async (formData) => {
-  const response = await fetch("https://boa-backend.onrender.com:10000" + "/quote", {
+  const response = await fetch("https://boa-backend-us.onrender.com" + "/quote", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ formData }),

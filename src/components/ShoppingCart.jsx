@@ -44,8 +44,8 @@ const ShoppingCart = () => {
 
 
   const checkout = async () => {
-    console.log("https://boa-backend.onrender.com:10000")
-    await fetch("https://boa-backend.onrender.com:10000", {
+    console.log("https://boa-backend-us.onrender.com/checkout")
+    await fetch("https://boa-backend-us.onrender.com/checkout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
